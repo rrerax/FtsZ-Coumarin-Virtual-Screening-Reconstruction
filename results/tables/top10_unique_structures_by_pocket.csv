@@ -1,0 +1,21 @@
+pocket,desalted_smiles,compound_ids,source_databases,best_docking_score_kcal_mol,median_docking_score_kcal_mol,max_tanimoto_to_reference,fingerprint_methods,source_id_count,mol_weight,logp,hbd,hba,tpsa,rotatable_bonds,heavy_atoms,passes_lipinski_light
+BP1,Cc1c(O)c2ccc3ccccc3c2oc1=O,251157;ZINC000103969950,ZINC15;numeric library ID,-7.396,-7.396,0.88,Avalon;FCFP;RDK;Rdmaccs,2,226.231,2.96,1,3,50.44,0,17,True
+BP1,O=c1ccc2c(ccc3oc4ccccc4c32)o1,CHEMBL1929523,ChEMBL23,-7.388,-7.388,0.6,FCFP;Morgan;Pairs,1,236.226,3.692,0,3,43.35,0,18,True
+BP1,N#Cc1c(O)c2cc3ccccc3cc2oc1=O,CHEMBL3306562,ChEMBL23,-7.338,-7.338,0.75,Avalon,1,237.214,2.523,1,4,74.23,0,18,True
+BP1,Oc1ccc(-c2cnc3ccc4ccncc4c3c2)cc1,DB03623,DrugBank,-7.328,-7.328,0.316,FCFP,1,272.307,4.156,1,3,46.01,1,21,True
+BP1,Cc1c(C)c2ccc(O)cc2oc1=O,MolPort-002-367-171,MolPort,-7.327,-7.327,0.846,Rdmaccs,1,190.198,2.115,1,3,50.44,0,14,True
+BP1,O=c1cc(-c2ccccc2)oc2c1ccc1ccc(O)cc12,CHEMBL329500,ChEMBL23,-7.27,-7.27,0.913,Rdmaccs,1,288.302,4.319,1,3,50.44,1,22,True
+BP1,c1ccc2c(c1)ccc1ccccc12,PEY,PDB ligand,-7.242,-7.242,0.659,Pattern,1,178.234,3.993,0,0,0.0,0,14,True
+BP1,O=c1oc2cc(O)ccc2c2oc3cc(O)cc(O)c3c12,HMDB34138,HMDB,-7.241,-7.241,0.786,FCFP;Morgan;RDK;Rdmaccs,1,284.223,2.809,3,6,104.04,0,21,True
+BP1,CC1(C)c2ccccc2-c2nc3ccccc3cc2C1O,19824,numeric library ID,-7.229,-7.229,0.282,FCFP,1,275.351,4.226,1,2,33.12,0,21,True
+BP1,Oc1cc(-c2cc3ccccc3o2)c(Br)c(O)c1O,CHEMBL3409185,ChEMBL23,-7.206,-7.206,0.571,Torsions,1,321.126,3.979,3,4,73.83,1,19,True
+BP2,Oc1cc(-c2nc3ccccc3o2)c(O)cc1-c1nc2ccccc2o1,746361,numeric library ID,-9.116,-9.116,0.441,Morgan,1,344.326,4.714,2,6,92.52,2,26,True
+BP2,Cc1ccccc1N=Nc1ccc(N=Nc2c(O)ccc3ccccc23)c(C)c1,3543,numeric library ID,-9.093,-9.093,0.265,FCFP;Morgan,1,380.451,7.993,1,5,69.67,4,29,False
+BP2,Cc1cc(=O)oc2cc(O)cc(OCc3ccccc3)c12,118810,numeric library ID,-8.495,-8.495,0.694,Avalon,1,282.295,3.386,1,4,59.67,3,21,True
+BP2,O=C(Nc1ccc(Cl)cc1)c1cc2c(cc1O)[nH]c1ccccc12,50651,numeric library ID,-8.307,-8.307,0.241,Morgan;Torsions,1,336.778,4.932,3,2,65.12,2,24,True
+BP2,O=C(NNC(=O)c1c(O)c2ccccc2oc1=O)c1c(O)c2ccccc2oc1=O,MolPort-002-321-924,MolPort,-8.303,-8.303,0.562,FCFP,1,408.322,1.385,4,8,159.08,2,30,True
+BP2,O=c1oc2ccccc2c(O)c1C(c1cccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)c1)c1c(O)c2ccccc2oc1=O,686393;CHEMBL392451,ChEMBL23;numeric library ID,-8.211,-8.211,0.633,FCFP,2,746.68,7.295,4,12,201.76,6,56,False
+BP2,O=c1cc(-c2cc3ccccc3o2)c2cc(O)ccc2o1,CHEMBL1364708;MolPort-003-378-434,ChEMBL23;MolPort,-8.175,-8.175,0.475,Morgan,2,278.263,3.912,1,4,63.58,1,21,True
+BP2,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,4368550;CHEMBL1801014;ZINC000000057885,ChEMBL23;ZINC15;numeric library ID,-8.141,-8.141,0.913,Rdmaccs,3,288.302,4.319,1,3,50.44,1,22,True
+BP2,COc1ccc(C(=O)O[C@H]2CC[C@@]3(C)[C@@H]4CC[C@H]5[C@]6(O)C[C@H](O)[C@@]7(O)[C@@H](CN8C[C@@H](C)CC[C@H]8[C@@]7(C)O)[C@]6(O)C[C@@]53O[C@@]24O)cc1OC,7524,numeric library ID,-8.124,-8.124,0.315,RDK,1,673.8,1.356,6,12,178.61,4,48,False
+BP2,O=c1oc2cc3ccccc3cc2c2c1ccc1ccccc12,656562,numeric library ID,-8.08,-8.08,0.818,RDK;Rdmaccs,1,296.325,5.253,0,2,30.21,0,23,False

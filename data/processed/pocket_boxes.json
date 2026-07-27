@@ -1,0 +1,30 @@
+{
+  "BP1": {
+    "center": [
+      -50.6447,
+      35.0742,
+      15.2025
+    ],
+    "size": [
+      22.5,
+      22.5,
+      22.5
+    ],
+    "source": "ezPocket_fpocket3.tsv / Pocket1",
+    "note": "Estimated from source pocket center and volume; replace with original ezSMDock/Vina box if recovered."
+  },
+  "BP2": {
+    "center": [
+      -63.4691,
+      20.8178,
+      1.73489
+    ],
+    "size": [
+      22.5,
+      22.5,
+      22.5
+    ],
+    "source": "ezPocket_fconv.tsv / Pocket0",
+    "note": "Estimated from source pocket center and volume; replace with original ezSMDock/Vina box if recovered."
+  }
+}

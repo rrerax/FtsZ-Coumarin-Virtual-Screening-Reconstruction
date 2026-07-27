@@ -1,0 +1,21 @@
+pocket,compound_ids,source_databases,desalted_smiles,old_best_docking_score_kcal_mol,new_vina_score_kcal_mol,score_delta_new_minus_old,ligand_name,out_pdbqt,log_path,returncode
+BP1,251157;ZINC000103969950,ZINC15;numeric library ID,Cc1c(O)c2ccc3ccccc3c2oc1=O,-7.396,-7.466,-0.07000000000000028,BP1_251157,work/docking/BP1/BP1_251157_vina_out.pdbqt,work/docking/BP1/BP1_251157_vina.log,0
+BP1,CHEMBL1929523,ChEMBL23,O=c1ccc2c(ccc3oc4ccccc4c32)o1,-7.388,-7.571,-0.18299999999999983,BP1_CHEMBL1929523,work/docking/BP1/BP1_CHEMBL1929523_vina_out.pdbqt,work/docking/BP1/BP1_CHEMBL1929523_vina.log,0
+BP1,CHEMBL3306562,ChEMBL23,N#Cc1c(O)c2cc3ccccc3cc2oc1=O,-7.338,-6.865,0.47299999999999986,BP1_CHEMBL3306562,work/docking/BP1/BP1_CHEMBL3306562_vina_out.pdbqt,work/docking/BP1/BP1_CHEMBL3306562_vina.log,0
+BP1,DB03623,DrugBank,Oc1ccc(-c2cnc3ccc4ccncc4c3c2)cc1,-7.328,-7.655,-0.32699999999999996,BP1_DB03623,work/docking/BP1/BP1_DB03623_vina_out.pdbqt,work/docking/BP1/BP1_DB03623_vina.log,0
+BP1,MolPort-002-367-171,MolPort,Cc1c(C)c2ccc(O)cc2oc1=O,-7.327,-7.247,0.08000000000000007,BP1_MolPort-002-367-171,work/docking/BP1/BP1_MolPort-002-367-171_vina_out.pdbqt,work/docking/BP1/BP1_MolPort-002-367-171_vina.log,0
+BP1,CHEMBL329500,ChEMBL23,O=c1cc(-c2ccccc2)oc2c1ccc1ccc(O)cc12,-7.27,-7.664,-0.39400000000000013,BP1_CHEMBL329500,work/docking/BP1/BP1_CHEMBL329500_vina_out.pdbqt,work/docking/BP1/BP1_CHEMBL329500_vina.log,0
+BP1,PEY,PDB ligand,c1ccc2c(c1)ccc1ccccc12,-7.242,-7.367,-0.125,BP1_PEY,work/docking/BP1/BP1_PEY_vina_out.pdbqt,work/docking/BP1/BP1_PEY_vina.log,0
+BP1,HMDB34138,HMDB,O=c1oc2cc(O)ccc2c2oc3cc(O)cc(O)c3c12,-7.241,-7.51,-0.26900000000000013,BP1_HMDB34138,work/docking/BP1/BP1_HMDB34138_vina_out.pdbqt,work/docking/BP1/BP1_HMDB34138_vina.log,0
+BP1,19824,numeric library ID,CC1(C)c2ccccc2-c2nc3ccccc3cc2C1O,-7.229,-7.873,-0.6440000000000001,BP1_19824,work/docking/BP1/BP1_19824_vina_out.pdbqt,work/docking/BP1/BP1_19824_vina.log,0
+BP1,CHEMBL3409185,ChEMBL23,Oc1cc(-c2cc3ccccc3o2)c(Br)c(O)c1O,-7.206,-7.282,-0.07599999999999962,BP1_CHEMBL3409185,work/docking/BP1/BP1_CHEMBL3409185_vina_out.pdbqt,work/docking/BP1/BP1_CHEMBL3409185_vina.log,0
+BP2,746361,numeric library ID,Oc1cc(-c2nc3ccccc3o2)c(O)cc1-c1nc2ccccc2o1,-9.116,-9.761,-0.6449999999999996,BP2_746361,work/docking/BP2/BP2_746361_vina_out.pdbqt,work/docking/BP2/BP2_746361_vina.log,0
+BP2,118810,numeric library ID,Cc1cc(=O)oc2cc(O)cc(OCc3ccccc3)c12,-8.495,-8.985,-0.4900000000000002,BP2_118810,work/docking/BP2/BP2_118810_vina_out.pdbqt,work/docking/BP2/BP2_118810_vina.log,0
+BP2,50651,numeric library ID,O=C(Nc1ccc(Cl)cc1)c1cc2c(cc1O)[nH]c1ccccc12,-8.307,-8.76,-0.4529999999999994,BP2_50651,work/docking/BP2/BP2_50651_vina_out.pdbqt,work/docking/BP2/BP2_50651_vina.log,0
+BP2,MolPort-002-321-924,MolPort,O=C(NNC(=O)c1c(O)c2ccccc2oc1=O)c1c(O)c2ccccc2oc1=O,-8.303,-9.173,-0.8699999999999992,BP2_MolPort-002-321-924,work/docking/BP2/BP2_MolPort-002-321-924_vina_out.pdbqt,work/docking/BP2/BP2_MolPort-002-321-924_vina.log,0
+BP2,CHEMBL1364708;MolPort-003-378-434,ChEMBL23;MolPort,O=c1cc(-c2cc3ccccc3o2)c2cc(O)ccc2o1,-8.175,-8.959,-0.7839999999999989,BP2_CHEMBL1364708,work/docking/BP2/BP2_CHEMBL1364708_vina_out.pdbqt,work/docking/BP2/BP2_CHEMBL1364708_vina.log,0
+BP2,4368550;CHEMBL1801014;ZINC000000057885,ChEMBL23;ZINC15;numeric library ID,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,-8.141,-9.201,-1.0600000000000005,BP2_4368550,work/docking/BP2/BP2_4368550_vina_out.pdbqt,work/docking/BP2/BP2_4368550_vina.log,0
+BP2,HMDB30796;LSM-36988;MRI,HMDB;LINCS;PDB ligand,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,-7.943,-7.95,-0.007000000000000561,BP2_HMDB30796,work/docking/BP2/BP2_HMDB30796_vina_out.pdbqt,work/docking/BP2/BP2_HMDB30796_vina.log,0
+BP2,71881,numeric library ID,O=C(Nc1ccc2ncccc2c1)Nc1ccc2ncccc2c1,-7.856,-8.611,-0.7550000000000008,BP2_71881,work/docking/BP2/BP2_71881_vina_out.pdbqt,work/docking/BP2/BP2_71881_vina.log,0
+BP2,338;DB07009,DrugBank;PDB ligand,Oc1ccc2nc(-c3cccc4c(O)cccc34)oc2c1,-7.843,-9.092,-1.2490000000000006,BP2_338,work/docking/BP2/BP2_338_vina_out.pdbqt,work/docking/BP2/BP2_338_vina.log,0
+BP2,HMDB30821,HMDB,O=c1ccc2cc(O)c(OC3OC(CO)C(O)C(O)C3O)cc2o1,-7.718,-8.717,-0.9990000000000006,BP2_HMDB30821,work/docking/BP2/BP2_HMDB30821_vina_out.pdbqt,work/docking/BP2/BP2_HMDB30821_vina.log,0

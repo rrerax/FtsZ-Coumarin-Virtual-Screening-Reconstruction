@@ -1,0 +1,4 @@
+scope,n,pearson_r,pearson_p,spearman_r,spearman_p
+BP1,10,-0.171,0.6369,-0.139,0.7009
+BP2,10,0.68,0.0304,0.503,0.1383
+overall,20,0.893,0.0,0.797,0.0

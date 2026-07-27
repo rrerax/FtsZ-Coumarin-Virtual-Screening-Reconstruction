@@ -1,0 +1,128 @@
+pocket,compound_id,desalted_smiles,source_database,best_docking_score_kcal_mol,median_docking_score_kcal_mol,max_tanimoto_to_reference,fingerprint_methods,observation_count,original_smiles,canonical_smiles,mol_weight,logp,hbd,hba,tpsa,rotatable_bonds,heavy_atoms,passes_lipinski_light
+BP1,251157,Cc1c(O)c2ccc3ccccc3c2oc1=O,numeric library ID,-7.396,-7.396,0.88,Avalon;FCFP;RDK;Rdmaccs,4,c1cccc2c1ccc1c2oc(=O)c(c1O)C,Cc1c(O)c2ccc3ccccc3c2oc1=O,226.231,2.96,1,3,50.44,0,17,True
+BP1,ZINC000103969950,Cc1c(O)c2ccc3ccccc3c2oc1=O,ZINC15,-7.396,-7.396,0.88,Avalon;Rdmaccs,2,Cc1c(O)c2ccc3ccccc3c2oc1=O,Cc1c(O)c2ccc3ccccc3c2oc1=O,226.231,2.96,1,3,50.44,0,17,True
+BP1,CHEMBL1929523,O=c1ccc2c(ccc3oc4ccccc4c32)o1,ChEMBL23,-7.388,-7.388,0.6,FCFP;Morgan;Pairs,3,c1ccc2c(c1)c1c(o2)ccc2c1ccc(=O)o2,O=c1ccc2c(ccc3oc4ccccc4c32)o1,236.226,3.692,0,3,43.35,0,18,True
+BP1,CHEMBL3306562,N#Cc1c(O)c2cc3ccccc3cc2oc1=O,ChEMBL23,-7.338,-7.338,0.75,Avalon,1,c1c2c(cc3c1cccc3)c(c(c(=O)o2)C#N)O,N#Cc1c(O)c2cc3ccccc3cc2oc1=O,237.214,2.523,1,4,74.23,0,18,True
+BP1,DB03623,Oc1ccc(-c2cnc3ccc4ccncc4c3c2)cc1,DrugBank,-7.328,-7.328,0.316,FCFP,1,c12c(ccnc1)ccc1c2cc(cn1)c1ccc(cc1)O,Oc1ccc(-c2cnc3ccc4ccncc4c3c2)cc1,272.307,4.156,1,3,46.01,1,21,True
+BP1,MolPort-002-367-171,Cc1c(C)c2ccc(O)cc2oc1=O,MolPort,-7.327,-7.327,0.846,Rdmaccs,1,Cc1c(C)c2ccc(O)cc2oc1=O,Cc1c(C)c2ccc(O)cc2oc1=O,190.198,2.115,1,3,50.44,0,14,True
+BP1,CHEMBL329500,O=c1cc(-c2ccccc2)oc2c1ccc1ccc(O)cc12,ChEMBL23,-7.27,-7.27,0.913,Rdmaccs,1,c12oc(cc(=O)c1ccc1c2cc(cc1)O)c1ccccc1,O=c1cc(-c2ccccc2)oc2c1ccc1ccc(O)cc12,288.302,4.319,1,3,50.44,1,22,True
+BP1,PEY,c1ccc2c(c1)ccc1ccccc12,PDB ligand,-7.242,-7.242,0.659,Pattern,1,c1cccc2c1c1c(cc2)cccc1,c1ccc2c(c1)ccc1ccccc12,178.234,3.993,0,0,0.0,0,14,True
+BP1,HMDB34138,O=c1oc2cc(O)ccc2c2oc3cc(O)cc(O)c3c12,HMDB,-7.241,-7.241,0.786,FCFP;Morgan;RDK;Rdmaccs,4,OC1=CC2=C(C=C1)C1=C(C3=C(O)C=C(O)C=C3O1)C(=O)O2,O=c1oc2cc(O)ccc2c2oc3cc(O)cc(O)c3c12,284.223,2.809,3,6,104.04,0,21,True
+BP1,19824,CC1(C)c2ccccc2-c2nc3ccccc3cc2C1O,numeric library ID,-7.229,-7.229,0.282,FCFP,1,n1c2c3ccccc3C(C(c2cc2c1cccc2)O)(C)C,CC1(C)c2ccccc2-c2nc3ccccc3cc2C1O,275.351,4.226,1,2,33.12,0,21,True
+BP1,CHEMBL3409185,Oc1cc(-c2cc3ccccc3o2)c(Br)c(O)c1O,ChEMBL23,-7.206,-7.206,0.571,Torsions,1,c1cccc2c1oc(c2)c1c(c(c(c(c1)O)O)O)Br,Oc1cc(-c2cc3ccccc3o2)c(Br)c(O)c1O,321.126,3.979,3,4,73.83,1,19,True
+BP1,HMDB32713,Oc1ccc(-c2cc(O)cc(O)c2)cc1,HMDB,-7.148,-7.148,0.66,Pattern,1,OC1=CC=C(C=C1)C1=CC(O)=CC(O)=C1,Oc1ccc(-c2cc(O)cc(O)c2)cc1,202.209,2.47,3,3,60.69,1,15,True
+BP1,HMDB59798,Oc1ccc2c(ccc3ccccc32)c1,HMDB,-7.118,-7.118,0.432,Pairs,1,OC1=CC=C2C(C=CC3=CC=CC=C23)=C1,Oc1ccc2c(ccc3ccccc32)c1,194.233,3.699,1,1,20.23,0,15,True
+BP1,DB04641,O=C(O)c1cc2cc(O)ccc2cc1O,DrugBank,-7.11,-7.11,0.704,Pairs;Pattern;Rdmaccs,3,OC(=O)c1c(O)cc2ccc(O)cc2c1,O=C(O)c1cc2cc(O)ccc2cc1O,204.181,1.949,3,3,77.76,1,15,True
+BP1,10510606,O=c1c2ccccc2oc2cc(O)cc(O)c12,numeric library ID,-7.092,-7.092,0.514,Morgan,1,Oc1cc(O)c2c(c1)oc1ccccc1c2=O,O=c1c2ccccc2oc2cc(O)cc(O)c12,228.203,2.357,2,4,70.67,0,17,True
+BP1,MolPort-006-318-916,O=c1c2ccccc2oc2cc(O)cc(O)c12,MolPort,-7.092,-7.092,0.514,Morgan,1,Oc1cc(O)c2c(oc3ccccc3c2=O)c1,O=c1c2ccccc2oc2cc(O)cc(O)c12,228.203,2.357,2,4,70.67,0,17,True
+BP1,ZINC000006117594,O=c1c2ccccc2oc2cc(O)cc(O)c12,ZINC15,-7.092,-7.092,0.514,Morgan,1,O=c1c2ccccc2oc2cc(O)cc(O)c12,O=c1c2ccccc2oc2cc(O)cc(O)c12,228.203,2.357,2,4,70.67,0,17,True
+BP1,SCHEMBL15388250,Cc1ccc2c(=O)oc3cc(O)ccc3c2c1,SureChEMBL,-7.072,-7.072,0.957,Rdmaccs,1,c12oc(=O)c3c(c1ccc(c2)O)cc(cc3)C,Cc1ccc2c(=O)oc3cc(O)ccc3c2c1,226.231,2.96,1,3,50.44,0,17,True
+BP1,LSM-3723,O=C1c2ccccc2-c2cccc3cccc1c23,LINCS,-7.064,-7.064,0.393,Pairs,1,O=C1c2ccccc2c3cccc4cccc1c34,O=C1c2ccccc2-c2cccc3cccc1c23,230.266,4.051,0,1,17.07,0,18,True
+BP1,402797,Cc1cc(=O)oc2cc(O)cc(O)c12,numeric library ID,-7.062,-7.062,0.788,Pattern,1,Cc1c2c(cc(cc2O)O)oc(=O)c1.*C,*C.Cc1cc(=O)oc2cc(O)cc(O)c12,192.17,1.513,2,4,70.67,0,14,True
+BP1,MolPort-000-744-145,Cc1cc(=O)oc2cc(O)cc(O)c12,MolPort,-7.062,-7.062,0.649,FCFP;RDK,2,Cc1cc(=O)oc2cc(O)cc(O)c12,Cc1cc(=O)oc2cc(O)cc(O)c12,192.17,1.513,2,4,70.67,0,14,True
+BP1,ZINC000000058126,Cc1cc(=O)oc2cc(O)cc(O)c12,ZINC15,-7.062,-7.062,0.586,FCFP,1,Cc1cc(=O)oc2cc(O)cc(O)c12,Cc1cc(=O)oc2cc(O)cc(O)c12,192.17,1.513,2,4,70.67,0,14,True
+BP1,HMDB59801,Oc1cc2ccccc2c2ccccc12,HMDB,-7.051,-7.051,0.406,Torsions,1,OC1=CC2=CC=CC=C2C2=CC=CC=C12,Oc1cc2ccccc2c2ccccc12,194.233,3.699,1,1,20.23,0,15,True
+BP1,151252,O=C(O)c1cc2ccccc2c2cc(Br)ccc12,numeric library ID,-7.043,-7.043,0.5,Morgan;Pairs;Rdmaccs;Torsions,4,Brc1ccc2c(c1)c1ccccc1cc2C(=O)O,O=C(O)c1cc2ccccc2c2cc(Br)ccc12,301.139,4.454,1,1,37.3,1,18,True
+BP1,CHEMBL271516,O=c1cc(CCl)c2ccc(O)cc2o1,ChEMBL23,-7.036,-7.036,0.815,Pattern,1,c1c(cc2c(c1)c(cc(=O)o2)CCl)O,O=c1cc(CCl)c2ccc(O)cc2o1,210.616,2.237,1,3,50.44,1,14,True
+BP1,MolPort-000-422-134,O=c1cc(CCl)c2ccc(O)cc2o1,MolPort,-7.036,-7.036,0.815,Pattern,1,Oc1ccc2c(CCl)cc(=O)oc2c1,O=c1cc(CCl)c2ccc(O)cc2o1,210.616,2.237,1,3,50.44,1,14,True
+BP1,LSM-25905,Cc1cc(O)nc2cc(O)ccc12,LINCS,-7.024,-7.024,0.645,Pattern,1,Cc1cc(O)nc2cc(O)ccc12,Cc1cc(O)nc2cc(O)ccc12,175.187,1.954,2,3,53.35,0,13,True
+BP1,54870284,COc1ccc2c(=O)oc3cc(O)ccc3c2c1,numeric library ID,-6.991,-6.991,0.691,RDK,1,COc1ccc2c(c1)c1ccc(O)cc1oc2=O,COc1ccc2c(=O)oc3cc(O)ccc3c2c1,242.23,2.66,1,4,59.67,1,18,True
+BP1,LSM-32647,CN(C)C(=O)c1c(-c2ccccc2)oc2ccc(O)cc12,LINCS,-6.988,-6.988,0.304,Morgan,1,CN(C)C(=O)c1c(oc2ccc(O)cc12)c3ccccc3,CN(C)C(=O)c1c(-c2ccccc2)oc2ccc(O)cc12,281.311,3.507,1,3,53.68,2,21,True
+BP1,LSM-33579,O=C(NC1CCCC1)c1cc2c(ccc3ccccc32)o1,LINCS,-6.986,-6.986,0.395,Torsions,1,O=C(NC1CCCC1)c2oc3ccc4ccccc4c3c2,O=C(NC1CCCC1)c1cc2c(ccc3ccccc32)o1,279.339,4.258,1,2,42.24,2,21,True
+BP1,53845739,C#Cc1cc(=O)oc2ccccc12,numeric library ID,-6.98,-6.98,0.847,Pairs;Pattern;Torsions,3,O=c1cc(C#C)c2ccccc2o1,C#Cc1cc(=O)oc2ccccc12,170.167,1.774,0,2,30.21,0,13,True
+BP1,SCHEMBL13315779,C#Cc1cc(=O)oc2ccccc12,SureChEMBL,-6.98,-6.98,0.704,Morgan;Torsions,2,c1ccc2c(c1)oc(=O)cc2C#C,C#Cc1cc(=O)oc2ccccc12,170.167,1.774,0,2,30.21,0,13,True
+BP1,ZINC000200389531,C#Cc1cc(=O)oc2ccccc12,ZINC15,-6.98,-6.98,0.847,Pairs;Pattern;Torsions,3,C#Cc1cc(=O)oc2ccccc12,C#Cc1cc(=O)oc2ccccc12,170.167,1.774,0,2,30.21,0,13,True
+BP1,1401,Cc1cc(=O)oc2cc(O)ccc12,numeric library ID,-6.967,-6.967,0.957,Avalon;FCFP;Morgan;Pairs;Pattern;RDK;Rdmaccs;Torsions,8,CC1=CC(=O)OC2=C1C=CC(O)=C2,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,4MU,Cc1cc(=O)oc2cc(O)ccc12,PDB ligand,-6.967,-6.967,0.957,Avalon;FCFP;Morgan;Pairs;RDK;Rdmaccs;Torsions,7,c1cc(cc2oc(=O)cc(C)c12)O,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,529222,Cc1cc(=O)oc2cc(O)ccc12,numeric library ID,-6.967,-6.967,0.957,Rdmaccs,1,Cc1cc(=O)oc2cc(O)ccc12,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,760397,Cc1cc(=O)oc2cc(O)ccc12,numeric library ID,-6.967,-6.967,0.537,Morgan;Pairs;Torsions,3,c1(cc(=O)oc2c1ccc(c2)O)C,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,DB07118,Cc1cc(=O)oc2cc(O)ccc12,DrugBank,-6.967,-6.967,0.704,Avalon;Morgan;RDK;Torsions,4,c1cc(cc2oc(=O)cc(C)c12)O,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,HMDB59622,Cc1cc(=O)oc2cc(O)ccc12,HMDB,-6.967,-6.967,0.704,Avalon,1,CC1=CC(=O)OC2=C1C=CC(O)=C2,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,LSM-3025,Cc1cc(=O)oc2cc(O)ccc12,LINCS,-6.967,-6.967,0.704,Avalon;FCFP;RDK,3,CC1=CC(=O)Oc2cc(O)ccc12,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP1,4417258,Cc1ccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)cc1,numeric library ID,-6.954,-6.954,0.613,FCFP,1,Cc1ccc(cc1)C(c1c(O)c2ccccc2oc1=O)c1c(O)c2ccccc2oc1=O,Cc1ccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)cc1,426.424,4.799,2,6,100.88,3,32,True
+BP1,62129,Oc1ccc2c(ccc3nc[nH]c32)c1,numeric library ID,-6.945,-6.945,0.603,Pattern,1,[nH]1cnc2c1c1ccc(cc1cc2)O,Oc1ccc2c(ccc3nc[nH]c32)c1,184.198,2.422,2,2,48.91,0,14,True
+BP1,MolPort-000-499-561,O=C(O)c1cc(=O)c2ccccc2o1,MolPort,-6.931,-6.931,0.679,Pairs;Torsions,2,OC(=O)c1cc(=O)c2ccccc2o1,O=C(O)c1cc(=O)c2ccccc2o1,190.154,1.491,1,3,67.51,1,14,True
+BP1,DB00776,NC(=O)N1c2ccccc2CC(=O)c2ccccc21,DrugBank,-6.883,-6.883,0.306,Pairs,1,O=C1Cc2c(N(c3c1cccc3)C(=O)N)cccc2,NC(=O)N1c2ccccc2CC(=O)c2ccccc21,252.273,2.642,1,2,63.4,0,19,True
+BP1,29698120,O=c1cc(O)c2ccc(F)cc2o1,numeric library ID,-6.856,-6.856,0.913,Avalon,1,Oc1cc(=O)oc2cc(F)ccc12,O=c1cc(O)c2ccc(F)cc2o1,180.134,1.638,1,3,50.44,0,13,True
+BP1,SCHEMBL2761833,O=c1cc(O)c2ccc(F)cc2o1,SureChEMBL,-6.856,-6.856,0.913,Avalon;FCFP;RDK,3,c12oc(=O)cc(c1ccc(c2)F)O,O=c1cc(O)c2ccc(F)cc2o1,180.134,1.638,1,3,50.44,0,13,True
+BP1,ZINC000044672070,O=c1cc(O)c2ccc(F)cc2o1,ZINC15,-6.856,-6.856,0.827,RDK,1,O=c1cc(O)c2ccc(F)cc2o1,O=c1cc(O)c2ccc(F)cc2o1,180.134,1.638,1,3,50.44,0,13,True
+BP1,CHEMBL32810,O=c1cc(O)c2ccc(O)cc2o1,ChEMBL23,-6.759,-6.759,0.95,RDK,1,c1c(c2c(oc1=O)cc(cc2)O)O,O=c1cc(O)c2ccc(O)cc2o1,178.143,1.204,2,4,70.67,0,13,True
+BP1,MolPort-002-043-397,O=c1cc(O)c2ccc(O)cc2o1,MolPort,-6.759,-6.759,0.952,Avalon,1,Oc1ccc2c(O)cc(=O)oc2c1,O=c1cc(O)c2ccc(O)cc2o1,178.143,1.204,2,4,70.67,0,13,True
+BP1,SCHEMBL11848480,O=c1cc(O)c2ccc(O)cc2o1,SureChEMBL,-6.759,-6.759,0.919,Pattern,1,c1(O)cc2c(c(O)cc(=O)o2)cc1,O=c1cc(O)c2ccc(O)cc2o1,178.143,1.204,2,4,70.67,0,13,True
+BP1,5426,Cc1c2cc(O)c(=O)cc-2oc2cc(O)c(O)cc12,numeric library ID,-6.757,-6.757,0.498,Avalon;RDK,2,o1c2c(c(c3cc(c(cc13)O)O)C)cc(c(=O)c2)O,Cc1c2cc(O)c(=O)cc-2oc2cc(O)c(O)cc12,258.229,2.323,3,5,90.9,0,19,True
+BP1,DB00170,CC1=CC(=O)c2ccccc2C1=O,DrugBank,-6.575,-6.575,0.615,Morgan;Pattern;Torsions,3,O=C1c2c(C(=O)C=C1C)cccc2,CC1=CC(=O)c2ccccc2C1=O,172.183,2.012,0,2,34.14,0,13,True
+BP1,SCHEMBL9642273,O=c1[cH-]c(=O)c2ccccc2o1,SureChEMBL,-6.514,-6.514,0.71,Pairs,1,C1(=O)Oc2ccccc2C(=O)[CH-]1,O=c1[cH-]c(=O)c2ccccc2o1,161.136,0.872,0,3,47.28,0,12,True
+BP1,DB04840,N=C(N)N1CCc2ccccc2C1,DrugBank,-6.513,-6.513,0.222,FCFP,1,N1(CCc2c(C1)cccc2)C(=N)N,N=C(N)N1CCc2ccccc2C1,175.235,0.938,2,1,53.11,0,13,True
+BP1,DB00972,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1,DrugBank,-6.318,-6.318,0.263,Avalon,1,Clc1ccc(Cc2nn(C3CCCN(CC3)C)c(=O)c3c2cccc3)cc1,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1,381.907,4.298,0,4,38.13,3,27,True
+BP2,746361,Oc1cc(-c2nc3ccccc3o2)c(O)cc1-c1nc2ccccc2o1,numeric library ID,-9.116,-9.116,0.441,Morgan,1,c1(c2cc(c(c3nc4c(o3)cccc4)cc2O)O)nc2c(o1)cccc2,Oc1cc(-c2nc3ccccc3o2)c(O)cc1-c1nc2ccccc2o1,344.326,4.714,2,6,92.52,2,26,True
+BP2,3543,Cc1ccccc1N=Nc1ccc(N=Nc2c(O)ccc3ccccc23)c(C)c1,numeric library ID,-9.093,-9.093,0.265,FCFP;Morgan,2,CC1=C(C=CC=C1)N=NC1=CC(C)=C(C=C1)N=NC1=C(O)C=CC2=C1C=CC=C2,Cc1ccccc1N=Nc1ccc(N=Nc2c(O)ccc3ccccc23)c(C)c1,380.451,7.993,1,5,69.67,4,29,False
+BP2,118810,Cc1cc(=O)oc2cc(O)cc(OCc3ccccc3)c12,numeric library ID,-8.495,-8.495,0.694,Avalon,1,O(c1c2c(oc(=O)cc2C)cc(c1)O)Cc1ccccc1,Cc1cc(=O)oc2cc(O)cc(OCc3ccccc3)c12,282.295,3.386,1,4,59.67,3,21,True
+BP2,50651,O=C(Nc1ccc(Cl)cc1)c1cc2c(cc1O)[nH]c1ccccc12,numeric library ID,-8.307,-8.307,0.241,Morgan;Torsions,2,[nH]1c2cc(c(cc2c2c1cccc2)C(=O)Nc1ccc(Cl)cc1)O,O=C(Nc1ccc(Cl)cc1)c1cc2c(cc1O)[nH]c1ccccc12,336.778,4.932,3,2,65.12,2,24,True
+BP2,MolPort-002-321-924,O=C(NNC(=O)c1c(O)c2ccccc2oc1=O)c1c(O)c2ccccc2oc1=O,MolPort,-8.303,-8.303,0.562,FCFP,1,Oc1c(C(=O)NNC(=O)c2c(O)c3ccccc3oc2=O)c(=O)oc2ccccc12,O=C(NNC(=O)c1c(O)c2ccccc2oc1=O)c1c(O)c2ccccc2oc1=O,408.322,1.385,4,8,159.08,2,30,True
+BP2,686393,O=c1oc2ccccc2c(O)c1C(c1cccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)c1)c1c(O)c2ccccc2oc1=O,numeric library ID,-8.211,-8.211,0.633,FCFP,1,c1ccc2c(c1)oc(=O)c(c2O)C(c1c(=O)oc2c(c1O)cccc2)c1cccc(c1)C(c1c(c2ccccc2oc1=O)O)c1c(=O)oc2c(c1O)cccc2,O=c1oc2ccccc2c(O)c1C(c1cccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)c1)c1c(O)c2ccccc2oc1=O,746.68,7.295,4,12,201.76,6,56,False
+BP2,CHEMBL392451,O=c1oc2ccccc2c(O)c1C(c1cccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)c1)c1c(O)c2ccccc2oc1=O,ChEMBL23,-8.211,-8.211,0.633,FCFP,1,c1ccc2c(c1)oc(=O)c(c2O)C(c1c(O)c2c(oc1=O)cccc2)c1cccc(c1)C(c1c(=O)oc2c(c1O)cccc2)c1c(=O)oc2c(c1O)cccc2,O=c1oc2ccccc2c(O)c1C(c1cccc(C(c2c(O)c3ccccc3oc2=O)c2c(O)c3ccccc3oc2=O)c1)c1c(O)c2ccccc2oc1=O,746.68,7.295,4,12,201.76,6,56,False
+BP2,CHEMBL1364708,O=c1cc(-c2cc3ccccc3o2)c2cc(O)ccc2o1,ChEMBL23,-8.175,-8.175,0.475,Morgan,1,o1c(c2c3c(oc(=O)c2)ccc(O)c3)cc2c1cccc2,O=c1cc(-c2cc3ccccc3o2)c2cc(O)ccc2o1,278.263,3.912,1,4,63.58,1,21,True
+BP2,MolPort-003-378-434,O=c1cc(-c2cc3ccccc3o2)c2cc(O)ccc2o1,MolPort,-8.175,-8.175,0.475,Morgan,1,Oc1ccc2oc(=O)cc(c3cc4ccccc4o3)c2c1,O=c1cc(-c2cc3ccccc3o2)c2cc(O)ccc2o1,278.263,3.912,1,4,63.58,1,21,True
+BP2,4368550,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,numeric library ID,-8.141,-8.141,0.913,Rdmaccs,1,Oc1cccc(c1)c1cc(=O)c2ccc3ccccc3c2o1,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,288.302,4.319,1,3,50.44,1,22,True
+BP2,CHEMBL1801014,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,ChEMBL23,-8.141,-8.141,0.913,Rdmaccs,1,c1cc2c(oc(cc2=O)c2cccc(c2)O)c2c1cccc2,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,288.302,4.319,1,3,50.44,1,22,True
+BP2,ZINC000000057885,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,ZINC15,-8.141,-8.141,0.913,Rdmaccs,1,O=c1cc(c2cccc(O)c2)oc2c1ccc1ccccc21,O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12,288.302,4.319,1,3,50.44,1,22,True
+BP2,7524,COc1ccc(C(=O)O[C@H]2CC[C@@]3(C)[C@@H]4CC[C@H]5[C@]6(O)C[C@H](O)[C@@]7(O)[C@@H](CN8C[C@@H](C)CC[C@H]8[C@@]7(C)O)[C@]6(O)C[C@@]53O[C@@]24O)cc1OC,numeric library ID,-8.124,-8.124,0.315,RDK,1,O1[C@]23C[C@]4([C@H]5[C@@]([C@@]([C@H]6N(C[C@H](CC6)C)C5)(O)C)([C@H](C[C@]4([C@@H]2CC[C@H]2[C@@]3(CC[C@@H]([C@]12O)OC(=O)c1cc(c(cc1)OC)OC)C)O)O)O)O,COc1ccc(C(=O)O[C@H]2CC[C@@]3(C)[C@@H]4CC[C@H]5[C@]6(O)C[C@H](O)[C@@]7(O)[C@@H](CN8C[C@@H](C)CC[C@H]8[C@@]7(C)O)[C@]6(O)C[C@@]53O[C@@]24O)cc1OC,673.8,1.356,6,12,178.61,4,48,False
+BP2,656562,O=c1oc2cc3ccccc3cc2c2c1ccc1ccccc12,numeric library ID,-8.08,-8.08,0.818,RDK;Rdmaccs,2,c12ccccc1c1c(cc2)c(=O)oc2c1cc1c(c2)cccc1,O=c1oc2cc3ccccc3cc2c2c1ccc1ccccc12,296.325,5.253,0,2,30.21,0,23,False
+BP2,DB06595,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,DrugBank,-7.953,-7.953,0.318,FCFP;RDK,2,c12c(c3c4c5c1c1c(cccc1)n5[C@]1(O[C@@H](n4c4c3cccc4)C[C@@H](N(C)C(=O)c3ccccc3)[C@H]1OC)C)C(=O)NC2,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,570.649,5.907,1,6,77.73,3,43,False
+BP2,HMDB30796,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,HMDB,-7.943,-7.943,0.357,Torsions,1,OC1=CC(O)=C(C=C1)C1=C(O)C(=O)C2=C(O)C=C(O)C=C2O1,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,302.238,1.988,5,7,131.36,1,22,True
+BP2,LSM-36988,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,LINCS,-7.943,-7.943,0.724,FCFP;Rdmaccs;Torsions,3,OC1=C(Oc2cc(O)cc(O)c2C1=O)c3ccc(O)cc3O,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,302.238,1.988,5,7,131.36,1,22,True
+BP2,MRI,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,PDB ligand,-7.943,-7.943,0.724,FCFP;RDK;Rdmaccs;Torsions,4,Oc1c(=O)c2c(O)cc(O)cc2oc1c1ccc(O)cc1O,O=c1c(O)c(-c2ccc(O)cc2O)oc2cc(O)cc(O)c12,302.238,1.988,5,7,131.36,1,22,True
+BP2,71881,O=C(Nc1ccc2ncccc2c1)Nc1ccc2ncccc2c1,numeric library ID,-7.856,-7.856,0.27,FCFP,1,n1c2ccc(cc2ccc1)NC(=O)Nc1ccc2ncccc2c1,O=C(Nc1ccc2ncccc2c1)Nc1ccc2ncccc2c1,314.348,4.427,2,3,66.91,2,24,True
+BP2,338,Oc1ccc2nc(-c3cccc4c(O)cccc34)oc2c1,PDB ligand,-7.843,-7.843,0.302,Morgan,1,c1(cc2c(cc1)nc(o2)c1c2c(ccc1)c(ccc2)O)O,Oc1ccc2nc(-c3cccc4c(O)cccc34)oc2c1,277.279,4.059,2,4,66.49,1,21,True
+BP2,DB07009,Oc1ccc2nc(-c3cccc4c(O)cccc34)oc2c1,DrugBank,-7.843,-7.843,0.412,FCFP;Morgan;Torsions,3,c1(cc2c(cc1)nc(o2)c1c2c(ccc1)c(ccc2)O)O,Oc1ccc2nc(-c3cccc4c(O)cccc34)oc2c1,277.279,4.059,2,4,66.49,1,21,True
+BP2,HMDB30821,O=c1ccc2cc(O)c(OC3OC(CO)C(O)C(O)C3O)cc2o1,HMDB,-7.718,-7.718,0.547,Avalon,1,OCC1OC(OC2=C(O)C=C3C=CC(=O)OC3=C2)C(O)C(O)C1O,O=c1ccc2cc(O)c(OC3OC(CO)C(O)C(O)C3O)cc2o1,340.284,-1.323,5,9,149.82,3,24,True
+BP2,13974,Nc1ccc(N=Nc2ccccc2)c2ccccc12,numeric library ID,-7.699,-7.699,0.592,Pattern,1,N(=Nc1ccc(c2c1cccc2)N)/c1ccccc1,Nc1ccc(N=Nc2ccccc2)c2ccccc12,247.301,4.837,1,3,50.74,2,19,True
+BP2,HMDB38956,O=c1oc(C=CC=Cc2ccc(O)cc2)nc2ccccc12,HMDB,-7.636,-7.636,0.385,FCFP,1,OC1=CC=C(C=CC=C/C2=NC3=CC=CC=C3C(=O)O2)C=C1,O=c1oc(C=CC=Cc2ccc(O)cc2)nc2ccccc12,291.306,3.62,1,4,63.33,3,22,True
+BP2,96541,N#CC1C=Cc2c(ccc3ccccc23)N1C(=O)c1ccccc1,numeric library ID,-7.635,-7.635,0.341,Avalon,1,N1(C(C=Cc2c3ccccc3ccc12)C#N)C(=O)c1ccccc1,N#CC1C=Cc2c(ccc3ccccc23)N1C(=O)c1ccccc1,310.356,4.406,0,2,44.1,1,24,True
+BP2,85Z,Cc1cc(F)ccc1-c1c(Cc2ccc(/C=C/C(=O)O)cc2)c2ccc(O)cc2oc1=O,PDB ligand,-7.594,-7.594,0.584,Avalon,1,Cc1cc(ccc1c1c(c2ccc(cc2oc1=O)O)Cc1ccc(cc1)/C=C/C(=O)O)F,Cc1cc(F)ccc1-c1c(Cc2ccc(/C=C/C(=O)O)cc2)c2ccc(O)cc2oc1=O,430.431,5.302,2,4,87.74,5,32,False
+BP2,CHEMBL2262363,O=c1oc2ccccc2c(O)c1-c1cccc(-c2c(O)c3ccccc3oc2=O)c1,ChEMBL23,-7.581,-7.581,0.797,Avalon,1,c1ccc2c(c1)oc(=O)c(c2O)c1cc(c2c(c3ccccc3oc2=O)O)ccc1,O=c1oc2ccccc2c(O)c1-c1cccc(-c2c(O)c3ccccc3oc2=O)c1,398.37,4.645,2,6,100.88,2,30,True
+BP2,DB07236,Oc1ccc2cc(-c3noc4cc(O)ccc34)ccc2c1,DrugBank,-7.533,-7.533,0.34,RDK,1,c1(cc2c(cc1)cc(cc2)O)c1c2c(on1)cc(cc2)O,Oc1ccc2cc(-c3noc4cc(O)ccc34)ccc2c1,277.279,4.059,2,4,66.49,1,21,True
+BP2,LSM-27001,O=c1oc2cc(OCc3ccc([N+](=O)[O-])cc3)ccc2c2c1CCCC2,LINCS,-7.532,-7.532,0.518,Avalon,1,[O-][N+](=O)c1ccc(COc2ccc3C4=C(CCCC4)C(=O)Oc3c2)cc1,O=c1oc2cc(OCc3ccc([N+](=O)[O-])cc3)ccc2c2c1CCCC2,351.358,4.159,0,5,82.58,4,26,True
+BP2,317,CCc1oc2ccccc2c1C(=O)c1ccc(O)cc1,PDB ligand,-7.497,-7.497,0.667,Avalon;Pairs;RDK;Rdmaccs;Torsions,5,CCC1=C(C(=O)C2=CC=C(O)C=C2)C2=C(O1)C=CC=C2,CCc1oc2ccccc2c1C(=O)c1ccc(O)cc1,266.296,3.932,1,3,50.44,3,20,True
+BP2,HMDB29534,CC(=O)c1c(O)ccc2c(=O)c(-c3ccccc3)c(C)oc12,HMDB,-7.487,-7.487,0.724,Rdmaccs,1,CC(=O)C1=C(O)C=CC2=C1OC(C)=C(C2=O)C1=CC=CC=C1,CC(=O)c1c(O)ccc2c(=O)c(-c3ccccc3)c(C)oc12,294.306,3.677,1,4,67.51,2,22,True
+BP2,DB08820,CC(C)(C)c1cc(C(C)(C)C)c(NC(=O)c2c[nH]c3ccccc3c2=O)cc1O,DrugBank,-7.456,-7.456,0.426,Avalon;Morgan;Rdmaccs;Torsions,4,Oc1c(C(C)(C)C)cc(C(C)(C)C)c(NC(=O)c2c(=O)c3c([nH]c2)cccc3)c1,CC(C)(C)c1cc(C(C)(C)C)c(NC(=O)c2c[nH]c3ccccc3c2=O)cc1O,392.499,5.081,3,3,82.19,2,29,False
+BP2,DB04750,O=C(O)c1ccc(-c2c3cc(F)c(=O)cc-3oc3cc(O)c(F)cc23)c(C(=O)O)c1,DrugBank,-7.429,-7.429,0.688,Avalon;Rdmaccs,2,OC(=O)c1cc(C(=O)O)c(cc1)c1c2cc(F)c(=O)cc2oc2cc(O)c(F)cc12,O=C(O)c1ccc(-c2c3cc(F)c(=O)cc-3oc3cc(O)c(F)cc23)c(C(=O)O)c1,412.3,3.945,3,5,125.04,3,30,True
+BP2,1842204,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,numeric library ID,-7.367,-7.367,0.8,Avalon;Morgan,2,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,266.252,3.012,0,4,56.51,2,20,True
+BP2,MolPort-002-113-300,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,MolPort,-7.367,-7.367,0.8,Avalon,1,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,266.252,3.012,0,4,56.51,2,20,True
+BP2,ZINC000000296657,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,ZINC15,-7.367,-7.367,0.8,Avalon;Morgan,2,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,O=C(Oc1cc(=O)oc2ccccc12)c1ccccc1,266.252,3.012,0,4,56.51,2,20,True
+BP2,DB01852,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,DrugBank,-7.312,-7.312,0.372,Pairs,1,c1c(c2c(cc1O)oc(c(c2=O)O)c1ccc(cc1)O)O,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,286.239,2.282,4,6,111.13,1,21,True
+BP2,LSM-5304,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,LINCS,-7.312,-7.312,0.372,Pairs,1,OC1=C(Oc2cc(O)cc(O)c2C1=O)c3ccc(O)cc3,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,286.239,2.282,4,6,111.13,1,21,True
+BP2,HMDB29219,O=c1oc2c(O)c(O)ccc2c2cc(O)c(O)cc12,HMDB,-7.247,-7.247,0.621,Morgan;RDK,2,OC1=CC2=C(C=C1O)C1=CC=C(O)C(O)=C1OC2=O,O=c1oc2c(O)c(O)ccc2c2cc(O)c(O)cc12,260.201,1.769,4,6,111.13,0,19,True
+BP2,SCHEMBL11830680,O=c1cc(O)c2cc(Cc3ccccc3)ccc2o1,SureChEMBL,-7.191,-7.191,0.957,Avalon;FCFP;Morgan;Rdmaccs,4,c1c(cc2c(c1)oc(=O)cc2O)Cc1ccccc1,O=c1cc(O)c2cc(Cc3ccccc3)ccc2o1,252.269,3.089,1,3,50.44,2,19,True
+BP2,17055,CC(=O)Oc1ccc2cc(-c3ccccc3)c(=O)oc2c1,numeric library ID,-7.183,-7.183,0.724,Rdmaccs,1,o1c2cc(ccc2cc(c1=O)c1ccccc1)OC(=O)C,CC(=O)Oc1ccc2cc(-c3ccccc3)c(=O)oc2c1,280.279,3.385,0,4,56.51,2,21,True
+BP2,CHEMBL374372,O=c1cc(/C=C/c2ccc(O)c(O)c2)oc2ccccc12,ChEMBL23,-7.174,-7.174,0.541,Torsions,1,c1ccc2c(c1)oc(cc2=O)/C=C/c1cc(c(cc1)O)O,O=c1cc(/C=C/c2ccc(O)c(O)c2)oc2ccccc12,280.279,3.375,2,4,70.67,2,21,True
+BP2,LSM-36455,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,LINCS,-7.102,-7.102,0.581,Morgan;RDK,2,Oc1cc2C(=O)Oc3c(O)c(O)cc4C(=O)Oc(c1O)c2c34,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,302.194,1.313,4,8,141.34,0,22,True
+BP2,2357873,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,numeric library ID,-7.02,-7.02,0.8,FCFP,1,Oc1cc(=O)oc2c3ccccc3oc(=O)c12,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,230.175,1.605,1,5,80.65,0,17,True
+BP2,MolPort-002-153-633,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,MolPort,-7.02,-7.02,0.88,RDK;Rdmaccs;Torsions,3,Oc1cc(=O)oc2c1c(=O)oc1ccccc21,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,230.175,1.605,1,5,80.65,0,17,True
+BP2,ZINC000002897678,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,ZINC15,-7.02,-7.02,0.8,FCFP,1,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,O=c1cc(O)c2c(=O)oc3ccccc3c2o1,230.175,1.605,1,5,80.65,0,17,True
+BP2,2035856,O=c1cc(Oc2cc(=O)oc3ccccc23)c2ccccc2o1,numeric library ID,-7.005,-7.005,0.791,RDK,1,O=c1cc(Oc2cc(=O)oc3ccccc23)c2ccccc2o1,O=c1cc(Oc2cc(=O)oc3ccccc23)c2ccccc2o1,306.273,3.692,0,5,69.65,2,23,True
+BP2,CHEMBL3094027,O=c1cc(O)c2ccc(OCc3cccc(F)c3)cc2o1,ChEMBL23,-6.968,-6.968,0.672,RDK,1,c1(=O)cc(c2ccc(cc2o1)OCc1cc(ccc1)F)O,O=c1cc(O)c2ccc(OCc3cccc(F)c3)cc2o1,286.258,3.217,1,4,59.67,3,21,True
+BP2,2608,O=c1cc2oc3cc(O)c(O)cc3c(-c3ccccc3)c-2cc1O,numeric library ID,-6.961,-6.961,0.476,Torsions,1,o1c2c(c(c3ccccc3)c3cc(c(cc13)O)O)cc(c(=O)c2)O,O=c1cc2oc3cc(O)c(O)cc3c(-c3ccccc3)c-2cc1O,320.3,3.682,3,5,90.9,1,24,True
+BP2,HMDB29518,CC(=O)c1ccc2oc(=O)cc(C)c2c1O,HMDB,-6.957,-6.957,0.714,Pairs;Pattern,2,CC(=O)C1=C(O)C2=C(OC(=O)C=C2C)C=C1,CC(=O)c1ccc2oc(=O)cc(C)c2c1O,218.208,2.01,1,4,67.51,1,16,True
+BP2,1477,CC(C)Oc1ccc2c(=O)c(-c3ccccc3)coc2c1,numeric library ID,-6.953,-6.953,0.614,Pattern,1,CC(C)OC1=CC=C2C(=O)C(=COC2=C1)C1=CC=CC=C1,CC(C)Oc1ccc2c(=O)c(-c3ccccc3)coc2c1,280.323,4.247,0,3,39.44,3,21,True
+BP2,LSM-17202,O=c1cc(CN2CCOCC2)c2cc(Cl)c(O)cc2o1,LINCS,-6.917,-6.917,0.64,Pattern,1,Oc1cc2OC(=O)C=C(CN3CCOCC3)c2cc1Cl,O=c1cc(CN2CCOCC2)c2cc(Cl)c(O)cc2o1,295.722,1.984,1,5,62.91,2,20,True
+BP2,DB08100,Cc1cc(/C=C/c2ccccc2)cc(C)c1O,DrugBank,-6.88,-6.88,0.637,Pattern,1,Cc1cc(cc(c1O)C)/C=C/c1ccccc1,Cc1cc(/C=C/c2ccccc2)cc(C)c1O,224.303,4.179,1,1,20.23,2,17,True
+BP2,380712,O=c1cc(O)c2ccc3ccccc3c2o1,numeric library ID,-6.86,-6.86,0.605,Pairs,1,c1(=O)cc(c2c(c3ccccc3cc2)o1)O,O=c1cc(O)c2ccc3ccccc3c2o1,212.204,2.652,1,3,50.44,0,16,True
+BP2,50005460,O=c1cc(O)c2ccc3ccccc3c2o1,numeric library ID,-6.86,-6.86,0.625,Pairs;Torsions,2,Oc1cc(=O)oc2c1ccc1ccccc21,O=c1cc(O)c2ccc3ccccc3c2o1,212.204,2.652,1,3,50.44,0,16,True
+BP2,MolPort-035-673-217,O=c1cc(O)c2ccc3ccccc3c2o1,MolPort,-6.86,-6.86,0.605,Pairs,1,Oc1cc(=O)oc2c1ccc1ccccc21,O=c1cc(O)c2ccc3ccccc3c2o1,212.204,2.652,1,3,50.44,0,16,True
+BP2,SCHEMBL2761855,O=c1cc(O)c2ccc3ccccc3c2o1,SureChEMBL,-6.86,-6.86,0.896,RDK,1,c1(=O)cc(c2ccc3c(c2o1)cccc3)O,O=c1cc(O)c2ccc3ccccc3c2o1,212.204,2.652,1,3,50.44,0,16,True
+BP2,ZINC000006576436,O=c1cc(O)c2ccc3ccccc3c2o1,ZINC15,-6.86,-6.86,0.896,Pairs;RDK,2,O=c1cc(O)c2ccc3ccccc3c2o1,O=c1cc(O)c2ccc3ccccc3c2o1,212.204,2.652,1,3,50.44,0,16,True
+BP2,32838,O=C1NC(=O)C2(CCc3ccccc32)N1,numeric library ID,-6.786,-6.786,0.311,Pairs,1,O=C1NC2(C(=O)N1)CCc1c2cccc1,O=C1NC(=O)C2(CCc3ccccc32)N1,202.213,0.667,2,2,58.2,0,15,True
+BP2,XZZ,Cc1cc(=O)oc2cc(O)c(Cl)cc12,PDB ligand,-6.748,-6.748,0.768,Pattern,1,c1c(Cl)c(cc2oc(=O)cc(C)c12)O,Cc1cc(=O)oc2cc(O)c(Cl)cc12,210.616,2.46,1,3,50.44,0,14,True
+BP2,CHEMBL227815,O=C1C(O)=Cc2cccc3cccc1c23,ChEMBL23,-6.711,-6.711,0.545,Pairs,1,c1ccc2cccc3c2c1C=C(C3=O)O,O=C1C(O)=Cc2cccc3cccc1c23,196.205,2.935,1,2,37.3,0,15,True
+BP2,SCHEMBL8945680,O=c1cc(O)c2cc(-c3ccccc3)ccc2o1,SureChEMBL,-6.711,-6.711,0.71,Torsions,1,o1c2c(c(cc1=O)O)cc(cc2)c1ccccc1,O=c1cc(O)c2cc(-c3ccccc3)ccc2o1,238.242,3.166,1,3,50.44,1,18,True
+BP2,764465,Cc1cc(=O)oc2cc(O)c(N)cc12,numeric library ID,-6.684,-6.684,0.777,Pattern,1,c1c2c(cc(c1N)O)oc(=O)cc2C,Cc1cc(=O)oc2cc(O)c(N)cc12,191.186,1.389,2,4,76.46,0,14,True
+BP2,DB09096,O=C(OOC(=O)c1ccccc1)c1ccccc1,DrugBank,-6.587,-6.587,0.582,Pattern,1,c1ccc(cc1)C(=O)OOC(=O)c1ccccc1,O=C(OOC(=O)c1ccccc1)c1ccccc1,242.23,2.615,0,4,52.6,2,18,True
+BP2,DB00794,CCC1(c2ccccc2)C(=O)NCNC1=O,DrugBank,-6.541,-6.541,0.275,Pairs,1,O=C1NCNC(=O)C1(CC)c1ccccc1,CCC1(c2ccccc2)C(=O)NCNC1=O,218.256,0.538,2,2,58.2,2,16,True
+BP2,3WL,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,PDB ligand,-6.505,-6.505,0.444,Pairs,1,c1ccccc1c1cc(=O)c2c(c(c(cc2o1)O)O)O,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,270.24,2.577,3,5,90.9,1,20,True
+BP2,529222,Cc1cc(=O)oc2cc(O)ccc12,numeric library ID,-6.453,-6.453,0.854,Pattern,1,Cc1cc(=O)oc2cc(O)ccc12,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP2,CHEMBL12208,Cc1cc(=O)oc2cc(O)ccc12,ChEMBL23,-6.453,-6.453,0.854,Pattern,1,o1c2c(c(cc1=O)C)ccc(O)c2,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP2,MolPort-000-467-367,Cc1cc(=O)oc2cc(O)ccc12,MolPort,-6.453,-6.453,0.854,Pattern,1,Cc1cc(=O)oc2cc(O)ccc12,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP2,ZINC000000058121,Cc1cc(=O)oc2cc(O)ccc12,ZINC15,-6.453,-6.453,0.854,Pattern,1,Cc1cc(=O)oc2cc(O)ccc12,Cc1cc(=O)oc2cc(O)ccc12,176.171,1.807,1,3,50.44,0,13,True
+BP2,SCHEMBL11848480,O=c1cc(O)c2ccc(O)cc2o1,SureChEMBL,-6.134,-6.134,0.919,Pattern,1,c1(O)cc2c(c(O)cc(=O)o2)cc1,O=c1cc(O)c2ccc(O)cc2o1,178.143,1.204,2,4,70.67,0,13,True
+BP2,SCHEMBL1366927,O=c1ccc2cccc(O)c2o1,SureChEMBL,-5.969,-5.969,0.774,Pairs,1,c1(=O)ccc2cccc(c2o1)O,O=c1ccc2cccc(O)c2o1,162.144,1.499,1,3,50.44,0,12,True
