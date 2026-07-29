@@ -11,7 +11,8 @@
 | 3 | `docs/technical_report_cn.md` | 中文技术报告，包含方法、结果和局限性 |
 | 4 | `docs/technical_report.md` | 英文技术报告，适合 GitHub 展示和技术审阅 |
 | 5 | `notebooks/ftsZ_reconstruction.ipynb` | Notebook 形式的表格和图形总览 |
-| 6 | `docs/data_availability.md` | 完整本地复跑所需的原始输入文件结构 |
+| 6 | `docs/enopt_extension.md` | EnOpt-style receptor ensemble reranking 说明 |
+| 7 | `docs/data_availability.md` | 完整本地复跑所需的原始输入文件结构 |
 
 ## 主要结果文件
 
@@ -23,7 +24,13 @@
 | 旧 score 与 Vina 复跑 score 对比图 | `results/figures/vina_rerun_vs_original_scores.png` |
 | BP1/BP2 重叠候选分子图 | `results/figures/bp_score_scatter_overlap.png` |
 | BP1/BP2 结合模式接触图 | `results/figures/binding_mode_top_hits.png` |
-| Vina 复跑结果表 | `results/tables/vina_rerun_top_structures.csv` |
+| EnOpt-style reranking 图 | `results/figures/enopt_style_reranking_vs_legacy.png` |
+| 构象 docking score heatmap | `results/figures/ensemble_score_matrix_heatmap.png` |
+| 构象权重图 | `results/figures/enopt_style_conformation_weights.png` |
+| 全量 Vina 复跑结果表 | `results/tables/vina_rerun_unique_structures.csv` |
+| 多构象 docking score 表 | `results/tables/ensemble_vina_scores.csv` |
+| EnOpt-style Top hit 表 | `results/tables/enopt_style_top_hits.csv` |
+| EnOpt-style score matrix | `results/tables/enopt_style_score_matrix.csv` |
 | 最优复跑分子的近邻残基表 | `results/tables/binding_contacts_top_hits.csv` |
 | EnOpt-ready score matrix | `data/processed/enopt_score_matrix.csv` |
 
@@ -44,7 +51,8 @@
 - 本项目是 FtsZ/coumarin HTVS 流程复现和复跑整理；
 - docking score 用于计算筛选和候选优先级判断，不等于实验活性；
 - BP1/BP2 是两个不同 binding pockets，不是同一 pocket 的多个构象；
-- 当前 `data/processed/enopt_score_matrix.csv` 是 EnOpt-ready / two-pocket baseline，不是严格 supervised EnOpt 模型；
+- 当前 EnOpt-style 扩展已经加入 5 个 FtsZ receptor conformations 和 450 个 ensemble docking jobs；
+- 当前 reranking 是 conformation-weighted consensus，不是严格 supervised EnOpt 模型；
 - 若要完整复跑，需要按 `docs/data_availability.md` 恢复原始 Excel、receptor PDB 和 pocket detection 输出。
 
 ## 快速复现命令
@@ -56,6 +64,7 @@ python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/draw_top_ligands.py
+python scripts/analyze_enopt_style.py
 python scripts/make_summary_figure.py
 ```
 
@@ -69,9 +78,12 @@ micromamba create -y -p .mamba_vina -f environment-vina.yml
 
 python scripts/clean_candidates.py
 python scripts/derive_pocket_boxes.py
-python scripts/prepare_docking_inputs.py --top-n 10 --drug-like-only --max-heavy-atoms 35
+python scripts/prepare_docking_inputs.py --top-n 0 --max-heavy-atoms 100
 python scripts/run_vina_batch.py --exhaustiveness 4 --cpu 4
 python scripts/analyze_binding_contacts.py
+python scripts/build_receptor_ensemble.py --target-ca-rmsd 0.65 --modes 2
+python scripts/run_ensemble_vina.py --exhaustiveness 3 --cpu 4
+python scripts/analyze_enopt_style.py
 python scripts/draw_top_ligands.py
 python scripts/draw_binding_mode_views.py
 python scripts/make_summary_figure.py

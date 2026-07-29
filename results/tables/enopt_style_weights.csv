@@ -1,0 +1,11 @@
+pocket,conformation_id,weight
+BP1,conf00_base,0.1906
+BP1,conf01_mode1_minus,0.2133
+BP1,conf02_mode1_plus,0.2158
+BP1,conf03_mode2_minus,0.1959
+BP1,conf04_mode2_plus,0.1844
+BP2,conf00_base,0.2294
+BP2,conf01_mode1_minus,0.1747
+BP2,conf02_mode1_plus,0.2146
+BP2,conf03_mode2_minus,0.1675
+BP2,conf04_mode2_plus,0.2139

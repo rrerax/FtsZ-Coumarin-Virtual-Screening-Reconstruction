@@ -1,0 +1,7 @@
+pocket,metric,top_compound_ids,top_ligand_name,top_score_kcal_mol,legacy_score_kcal_mol
+BP1,ensemble_best_score_kcal_mol,DB00776,BP1_DB00776,-7.797,-6.883
+BP1,ensemble_mean_score_kcal_mol,CHEMBL329500,BP1_CHEMBL329500,-7.691,-7.27
+BP1,enopt_style_weighted_score_kcal_mol,CHEMBL329500,BP1_CHEMBL329500,-7.691,-7.27
+BP2,ensemble_best_score_kcal_mol,686393;CHEMBL392451,BP2_686393,-10.46,-8.211
+BP2,ensemble_mean_score_kcal_mol,85Z,BP2_85Z,-9.691,-7.594
+BP2,enopt_style_weighted_score_kcal_mol,85Z,BP2_85Z,-9.702,-7.594

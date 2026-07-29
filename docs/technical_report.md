@@ -2,7 +2,7 @@
 
 ## Executive summary
 
-This stage reconstructs a legacy FtsZ/coumarin virtual-screening workflow into a reproducible project structure. The BP1/BP2 candidate spreadsheets were cleaned, SMILES strings were validated and canonicalized, two FtsZ pocket boxes were reconstructed from source ezPocket outputs and residue anchors, and a pilot AutoDock Vina rerun was completed for the top drug-like structures from each pocket.
+This stage reconstructs a legacy FtsZ/coumarin virtual-screening workflow into a reproducible project structure. The BP1/BP2 candidate spreadsheets were cleaned, SMILES strings were validated and canonicalized, two FtsZ pocket boxes were reconstructed from source ezPocket outputs and residue anchors, and an AutoDock Vina rerun was completed for all 90 cleaned unique structures across BP1/BP2. A small normal-mode receptor ensemble was then added to test EnOpt-style conformation-weighted reranking mechanics.
 
 Key numbers:
 
@@ -11,7 +11,7 @@ Key numbers:
 | BP1      |              101 |                    101 |           55 |      -7.396 |         -6.98  |      -6.318 |
 | BP2      |              103 |                    103 |           72 |      -9.116 |         -7.429 |      -5.969 |
 
-Additional structure-level deduplication produced **90 unique pocket-structure records** and an **88-row EnOpt-ready score matrix**.
+Additional structure-level deduplication produced **90 unique pocket-structure records**, an **88-row BP1/BP2 score matrix**, a **5-conformation receptor ensemble**, and **450/450 completed multi-conformation docking jobs** for the full cleaned unique-structure rerun set.
 
 ## Source inputs used
 
@@ -88,38 +88,22 @@ The Vina box sizes are estimated from source pocket centers/volumes and residue 
 
 ## AutoDock Vina rerun
 
-A pilot rerun was completed for the top 10 drug-like structures from BP1 and BP2. Ligand 3D coordinates were regenerated from the cleaned SMILES strings, receptor and ligand PDBQT files were prepared with an OpenBabel fallback, and Vina 1.2.7 was run with exhaustiveness 4 and seed 20260724.
+A full rerun was completed for all 90 cleaned unique structures from BP1 and BP2. Ligand 3D coordinates were regenerated from the cleaned SMILES strings, receptor and ligand PDBQT files were prepared with an OpenBabel fallback, and Vina 1.2.7 was run with exhaustiveness 4 and seed 20260724. One large BP2 ligand required a loose RDKit 3D-coordinate fallback, but the full cleaned set completed successfully.
 
-| pocket   | compound_ids                           |   old_best_docking_score_kcal_mol |   new_vina_score_kcal_mol |   score_delta_new_minus_old |
-|:---------|:---------------------------------------|----------------------------------:|--------------------------:|----------------------------:|
-| BP1      | 251157;ZINC000103969950                |                            -7.396 |                    -7.466 |                      -0.07  |
-| BP1      | CHEMBL1929523                          |                            -7.388 |                    -7.571 |                      -0.183 |
-| BP1      | CHEMBL3306562                          |                            -7.338 |                    -6.865 |                       0.473 |
-| BP1      | DB03623                                |                            -7.328 |                    -7.655 |                      -0.327 |
-| BP1      | MolPort-002-367-171                    |                            -7.327 |                    -7.247 |                       0.08  |
-| BP1      | CHEMBL329500                           |                            -7.27  |                    -7.664 |                      -0.394 |
-| BP1      | PEY                                    |                            -7.242 |                    -7.367 |                      -0.125 |
-| BP1      | HMDB34138                              |                            -7.241 |                    -7.51  |                      -0.269 |
-| BP1      | 19824                                  |                            -7.229 |                    -7.873 |                      -0.644 |
-| BP1      | CHEMBL3409185                          |                            -7.206 |                    -7.282 |                      -0.076 |
-| BP2      | 746361                                 |                            -9.116 |                    -9.761 |                      -0.645 |
-| BP2      | 118810                                 |                            -8.495 |                    -8.985 |                      -0.49  |
-| BP2      | 50651                                  |                            -8.307 |                    -8.76  |                      -0.453 |
-| BP2      | MolPort-002-321-924                    |                            -8.303 |                    -9.173 |                      -0.87  |
-| BP2      | CHEMBL1364708;MolPort-003-378-434      |                            -8.175 |                    -8.959 |                      -0.784 |
-| BP2      | 4368550;CHEMBL1801014;ZINC000000057885 |                            -8.141 |                    -9.201 |                      -1.06  |
-| BP2      | HMDB30796;LSM-36988;MRI                |                            -7.943 |                    -7.95  |                      -0.007 |
-| BP2      | 71881                                  |                            -7.856 |                    -8.611 |                      -0.755 |
-| BP2      | 338;DB07009                            |                            -7.843 |                    -9.092 |                      -1.249 |
-| BP2      | HMDB30821                              |                            -7.718 |                    -8.717 |                      -0.999 |
+Top rerun hits by pocket:
+
+| pocket   |   rerun_count |   successful_jobs | top_rerun_compound   |   legacy_score_kcal_mol |   rerun_score_kcal_mol |   score_delta |
+|:---------|--------------:|------------------:|:---------------------|------------------------:|-----------------------:|--------------:|
+| BP1      |            37 |                37 | DB00776              |                  -6.883 |                  -8.02 |        -1.137 |
+| BP2      |            53 |                53 | 686393;CHEMBL392451  |                  -8.211 |                 -10.76 |        -2.549 |
 
 Correlation between legacy worksheet scores and rerun Vina scores:
 
 | scope   |   n |   pearson_r |   pearson_p |   spearman_r |   spearman_p |
 |:--------|----:|------------:|------------:|-------------:|-------------:|
-| BP1     |  10 |      -0.171 |      0.6369 |       -0.139 |       0.7009 |
-| BP2     |  10 |       0.68  |      0.0304 |        0.503 |       0.1383 |
-| overall |  20 |       0.893 |      0      |        0.797 |       0      |
+| BP1     |  37 |       0.528 |      0.0008 |        0.543 |       0.0005 |
+| BP2     |  53 |       0.743 |      0      |        0.771 |       0      |
+| overall |  90 |       0.737 |      0      |        0.737 |       0      |
 
 Figures:
 
@@ -132,30 +116,35 @@ Figures:
 
 ## Binding-pose contact summary
 
-For the best rerun hit from each pocket, receptor residues within 4 Å of the top Vina pose were summarized as a lightweight binding-mode check. This does not replace manual PyMOL/Discovery Studio inspection, but it confirms that rerun poses are placed around residues discussed in the thesis.
+For the best full-rerun hit from each pocket, receptor residues within 4 Å of the top Vina pose were summarized as a lightweight binding-mode check. This does not replace manual PyMOL/Discovery Studio inspection, but it confirms that rerun poses are placed around residues discussed in the thesis.
 
-| pocket   |   compound_ids | residue   |   min_distance_a |   contact_count_within_4a | has_polar_candidate_within_3_5a   |
-|:---------|---------------:|:----------|-----------------:|--------------------------:|:----------------------------------|
-| BP1      |          19824 | SER50B    |            3.228 |                         9 | True                              |
-| BP1      |          19824 | ASP57B    |            3.301 |                         4 | False                             |
-| BP1      |          19824 | MET49B    |            3.485 |                        12 | False                             |
-| BP1      |          19824 | LEU48B    |            3.587 |                         2 | False                             |
-| BP1      |          19824 | LYS55B    |            3.601 |                        12 | False                             |
-| BP1      |          19824 | LEU47B    |            3.681 |                         7 | False                             |
-| BP1      |          19824 | ALA39B    |            3.748 |                         2 | False                             |
-| BP1      |          19824 | ASN41B    |            3.969 |                         1 | False                             |
-| BP1      |          19824 | LEU56B    |            3.974 |                         2 | False                             |
-| BP2      |         746361 | THR306B   |            2.825 |                         7 | True                              |
-| BP2      |         746361 | VAL305B   |            2.949 |                         3 | True                              |
-| BP2      |         746361 | SER260B   |            3.052 |                         5 | False                             |
-| BP2      |         746361 | ASN189B   |            3.119 |                        12 | True                              |
-| BP2      |         746361 | ARG304B   |            3.269 |                        18 | True                              |
-| BP2      |         746361 | ASP196B   |            3.276 |                         4 | False                             |
-| BP2      |         746361 | ALA262B   |            3.364 |                         7 | False                             |
-| BP2      |         746361 | ILE225B   |            3.59  |                        11 | False                             |
-| BP2      |         746361 | GLU185B   |            3.726 |                         1 | False                             |
-| BP2      |         746361 | VAL294B   |            3.894 |                         3 | False                             |
-| BP2      |         746361 | GLY193B   |            3.929 |                         1 | False                             |
+| pocket   | compound_ids        | residue   |   min_distance_a |   contact_count_within_4a | has_polar_candidate_within_3_5a   |
+|:---------|:--------------------|:----------|-----------------:|--------------------------:|:----------------------------------|
+| BP1      | DB00776             | LEU47B    |            3.197 |                        14 | False                             |
+| BP1      | DB00776             | LYS55B    |            3.228 |                        13 | True                              |
+| BP1      | DB00776             | ASP57B    |            3.249 |                         9 | True                              |
+| BP1      | DB00776             | SER50B    |            3.285 |                         4 | True                              |
+| BP1      | DB00776             | LEU56B    |            3.383 |                         7 | True                              |
+| BP1      | DB00776             | MET49B    |            3.435 |                         4 | False                             |
+| BP1      | DB00776             | ALA39B    |            3.58  |                         3 | False                             |
+| BP1      | DB00776             | ASN41B    |            3.607 |                         3 | False                             |
+| BP1      | DB00776             | LEU48B    |            3.612 |                         2 | False                             |
+| BP2      | 686393;CHEMBL392451 | GLU185B   |            2.881 |                        11 | True                              |
+| BP2      | 686393;CHEMBL392451 | SER182B   |            3.083 |                        15 | True                              |
+| BP2      | 686393;CHEMBL392451 | ARG304B   |            3.103 |                        11 | True                              |
+| BP2      | 686393;CHEMBL392451 | MET169B   |            3.141 |                        10 | False                             |
+| BP2      | 686393;CHEMBL392451 | VAL186B   |            3.264 |                         7 | True                              |
+| BP2      | 686393;CHEMBL392451 | LEU188B   |            3.361 |                         1 | False                             |
+| BP2      | 686393;CHEMBL392451 | SER227B   |            3.463 |                         8 | False                             |
+| BP2      | 686393;CHEMBL392451 | ASN189B   |            3.474 |                         6 | False                             |
+| BP2      | 686393;CHEMBL392451 | ILE225B   |            3.483 |                         3 | False                             |
+| BP2      | 686393;CHEMBL392451 | PRO245B   |            3.491 |                         1 | False                             |
+| BP2      | 686393;CHEMBL392451 | GLY170B   |            3.591 |                        11 | False                             |
+| BP2      | 686393;CHEMBL392451 | ILE240B   |            3.591 |                         6 | False                             |
+| BP2      | 686393;CHEMBL392451 | GLN192B   |            3.69  |                         1 | False                             |
+| BP2      | 686393;CHEMBL392451 | GLY226B   |            3.788 |                         1 | False                             |
+| BP2      | 686393;CHEMBL392451 | VAL174B   |            3.824 |                         1 | False                             |
+| BP2      | 686393;CHEMBL392451 | SER244B   |            3.986 |                         1 | False                             |
 
 Additional output:
 
@@ -168,24 +157,31 @@ Additional output:
 
 ![Binding-mode contact views](../results/figures/binding_mode_top_hits.png)
 
-## EnOpt / ensemble update
+## EnOpt-style ensemble update
 
-The current cleaned matrix has the correct high-level shape for ensemble-style reranking: compounds as rows and pocket/structure score columns as features. The file is:
+The cleaned BP1/BP2 matrix remains useful as a pocket-level screening baseline, while the added EnOpt-style module now tests conformation-level reranking on the same FtsZ system. Five receptor conformations were generated from the reconstructed FtsZ receptor using ANM normal-mode perturbations: the original receptor plus positive and negative perturbations along the first two non-trivial modes. All 90 cleaned unique structures were redocked across these five conformations, producing 450 completed Vina jobs.
 
-- `data/processed/enopt_score_matrix.csv`
+Core outputs:
 
-Important methodological note for CADD review: the current BP1/BP2 columns are two binding pockets, not multiple conformations of the same pocket. Therefore, this stage should be described as an **EnOpt-ready reconstruction and two-pocket ensemble baseline**, not as a strict supervised EnOpt model. A strict EnOpt run should add either:
+- `data/processed/enopt_score_matrix.csv` for the original BP1/BP2 pocket-level baseline
+- `results/tables/receptor_ensemble_manifest.csv` for generated receptor conformations
+- `results/tables/ensemble_vina_scores.csv` for conformation-level Vina scores
+- `results/tables/enopt_style_score_matrix.csv` for compound × conformation features
+- `results/tables/enopt_style_weights.csv` for rank-consistency conformation weights
+- `results/tables/enopt_style_top_hits.csv` for top candidates under ensemble-best, ensemble-mean, and weighted metrics
 
-1. multiple FtsZ conformations for the same binding pocket, plus active/decoy labels; or
-2. a clearly documented surrogate-label experiment, marked as exploratory rather than experimental activity prediction.
+Top EnOpt-style weighted results from the pilot ensemble:
 
-Current baseline columns include:
+| pocket | top weighted compound | weighted score, kcal/mol | legacy score, kcal/mol |
+|---|---:|---:|---:|
+| BP1 | CHEMBL329500 | -7.691 | -7.270 |
+| BP2 | 85Z | -9.702 | -7.594 |
 
-- `BP1`, `BP2`
-- `ensemble_best_score_kcal_mol`
-- `ensemble_mean_score_kcal_mol`
-- `rank_ensemble_best`
-- `rank_ensemble_mean`
+Methodological note for CADD review: this is an **EnOpt-style conformation-weighted consensus reranking**, not a strict supervised EnOpt model. The source files do not contain experimental active/decoy labels, so the current weighting is an exploratory rank-consistency procedure rather than activity-trained machine learning.
+
+![EnOpt-style reranking](../results/figures/enopt_style_reranking_vs_legacy.png)
+
+![Conformation-level score matrix](../results/figures/ensemble_score_matrix_heatmap.png)
 
 ## Reproducibility commands
 
@@ -199,6 +195,7 @@ python3 -m venv .venv
 python -m pip install -r requirements.txt
 python -m compileall -q scripts
 python scripts/draw_top_ligands.py
+python scripts/analyze_enopt_style.py
 python scripts/make_summary_figure.py
 ```
 
@@ -211,12 +208,15 @@ python -m pip install -r requirements.txt
 micromamba create -y -p .mamba_vina -f environment-vina.yml
 python scripts/clean_candidates.py
 python scripts/derive_pocket_boxes.py
-python scripts/prepare_docking_inputs.py --top-n 10 --drug-like-only --max-heavy-atoms 35
+python scripts/prepare_docking_inputs.py --top-n 0 --max-heavy-atoms 100
 python scripts/run_vina_batch.py --exhaustiveness 4 --cpu 4
 python scripts/analyze_binding_contacts.py
 python scripts/draw_top_ligands.py
 python scripts/draw_binding_mode_views.py
 python scripts/make_summary_figure.py
+python scripts/build_receptor_ensemble.py --target-ca-rmsd 0.65 --modes 2
+python scripts/run_ensemble_vina.py --exhaustiveness 3 --cpu 4
+python scripts/analyze_enopt_style.py
 ```
 
 Vina and OpenBabel were installed in `.mamba_vina` from conda-forge for the local rerun.
@@ -224,7 +224,8 @@ Vina and OpenBabel were installed in `.mamba_vina` from conda-forge for the loca
 ## Limitations and next steps
 
 - The exact original docking box file was not available, so box sizes are reconstructed estimates.
-- Some old candidates are very large or violate light Lipinski filters; they are retained in the cleaned tables but excluded from the fast top drug-like rerun.
-- The source files lack experimental active/inactive labels; strict ML-EnOpt model training is outside the scope of this stage.
+- One large BP2 candidate required a loose RDKit 3D-coordinate fallback during ligand preparation; the full cleaned set nevertheless completed successfully.
+- The receptor ensemble is a normal-mode pilot around one reconstructed structure, not a curated experimental-structure or MD-snapshot ensemble.
+- The source files lack experimental active/inactive labels; strict supervised EnOpt model training is outside the scope of this stage.
 - Docking score changes should be interpreted as rerun consistency evidence, not biological validation.
-- The next rigorous extension is to add multiple FtsZ receptor conformations for each pocket, generate a true compound × conformation matrix, and then run an EnOpt-style supervised/benchmarkable reranking.
+- The next rigorous extension is to replace the pilot ensemble with curated FtsZ conformers or MD snapshots and evaluate the reranking against active/decoy benchmarks.

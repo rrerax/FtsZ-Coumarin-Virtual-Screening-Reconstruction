@@ -1,0 +1,7 @@
+pocket,metric,n,pearson_r,pearson_p,spearman_r,spearman_p
+BP1,ensemble_best_score_kcal_mol,37,0.519,0.001,0.492,0.002
+BP1,ensemble_mean_score_kcal_mol,37,0.53,0.0007,0.527,0.0008
+BP1,enopt_style_weighted_score_kcal_mol,37,0.531,0.0007,0.527,0.0008
+BP2,ensemble_best_score_kcal_mol,53,0.752,0.0,0.802,0.0
+BP2,ensemble_mean_score_kcal_mol,53,0.747,0.0,0.802,0.0
+BP2,enopt_style_weighted_score_kcal_mol,53,0.752,0.0,0.804,0.0

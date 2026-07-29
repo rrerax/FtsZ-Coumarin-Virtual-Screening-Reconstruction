@@ -7,7 +7,7 @@ This repository contains curated tables, analysis scripts, figures, and reports 
 | Path | Content |
 |---|---|
 | `data/processed/` | Curated candidate tables and score matrices |
-| `results/tables/` | Summary tables, rerun-score comparisons, contact summaries |
+| `results/tables/` | Summary tables, rerun-score comparisons, contact summaries, and EnOpt-style ensemble outputs |
 | `results/figures/` | Generated plots, ligand panels, and contact-view figures |
 | `results/pymol/` | PyMOL-ready scripts for rendering locally restored docking poses |
 | `scripts/` | Cleaning, docking-preparation, rerun, analysis, and plotting scripts |
@@ -20,7 +20,7 @@ This repository contains curated tables, analysis scripts, figures, and reports 
 |---|---|
 | `data/raw/` | Original candidate spreadsheets, receptor structures, and pocket-detection exports |
 | `references/` | Source thesis/literature PDFs |
-| `work/` | Generated PDBQT files, Vina logs, poses, and rerun intermediates |
+| `work/` | Generated PDBQT files, receptor-ensemble PDBQT files, Vina logs, poses, and rerun intermediates |
 | `*.xlsx`, `*.pdf`, `*.pdb`, `*.mol2`, `*.sdf` | Raw spreadsheets, articles, receptor files, pocket files, and structure files |
 | `.venv/`, `.mamba_vina/` | Local dependency environments |
 
@@ -42,5 +42,6 @@ The repository can be reviewed from the processed outputs alone. Full docking re
 ## Notes
 
 - Docking poses and scores are computational screening outputs, not biochemical activity measurements.
+- The EnOpt-style outputs use a normal-mode receptor ensemble and rank-consistency weighting; they are not a supervised activity-prediction model without active/decoy labels.
 - Raw spreadsheets and structure files are intentionally kept out of version control.
 - The current repository should be interpreted as a reproducible reconstruction and rerun workflow, not as a complete experimental validation package.

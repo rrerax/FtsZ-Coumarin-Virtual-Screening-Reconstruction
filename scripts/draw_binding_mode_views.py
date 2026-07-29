@@ -289,7 +289,7 @@ def main() -> None:
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     receptor_path = RECEPTOR_PDB if RECEPTOR_PDB.exists() else FALLBACK_RECEPTOR_PDB
     receptor_atoms = parse_atoms(receptor_path)
-    rerun = pd.read_csv(TABLE_DIR / "vina_rerun_top_structures.csv")
+    rerun = pd.read_csv(TABLE_DIR / "vina_rerun_unique_structures.csv")
     contacts = pd.read_csv(TABLE_DIR / "binding_contacts_top_hits.csv")
     best_hits = rerun.sort_values("new_vina_score_kcal_mol").groupby("pocket", group_keys=False).head(1)
 

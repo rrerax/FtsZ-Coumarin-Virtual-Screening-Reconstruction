@@ -4,9 +4,9 @@
 
 本项目将既有 FtsZ 高通量虚拟筛选资料整理为一套可复现的 CADD 分析流程。输入资料包括 BP1、BP2 两个结合口袋的候选分子表、口袋检测输出和部分对接结果；本项目将其转化为结构化数据、可复跑脚本和可审阅图表。
 
-当前工作包括：候选表解析、SMILES 标准化、去盐与重复结构合并、BP1/BP2 口袋盒子重建、Top drug-like 候选分子 AutoDock Vina 复跑、旧分数与复跑分数对比、最优复跑分子近邻残基分析，以及 EnOpt-ready 的二维 score matrix。
+当前工作包括：候选表解析、SMILES 标准化、去盐与重复结构合并、BP1/BP2 口袋盒子重建、90 个 cleaned unique structures AutoDock Vina 全量复跑、旧分数与复跑分数对比、最优复跑分子近邻残基分析，以及基于 5 个 FtsZ receptor conformations 的 EnOpt-style 多构象重打分。
 
-> 方法边界：本项目应表述为 FtsZ HTVS 流程复现、两口袋 ensemble baseline 与 EnOpt-ready 数据整理。由于当前资料没有实验 active/decoy 标签，也没有同一 pocket 的多构象蛋白 ensemble，因此不应解读为严格的 supervised EnOpt 模型或实验活性验证。
+> 方法边界：本项目应表述为 FtsZ HTVS 流程复现、多构象 docking pilot 与 EnOpt-style consensus reranking。由于当前资料没有实验 active/decoy 标签，因此不应解读为严格的 supervised EnOpt 模型或实验活性验证。
 
 ## 项目背景
 
@@ -24,6 +24,8 @@
 | 原始 docking score 最大值 | -6.318 | -5.969 | kcal/mol |
 | 去盐 + 结构去重后结构数 |  |  | 90 个 unique structures |
 | EnOpt-ready matrix |  |  | 88 行 |
+| receptor ensemble |  |  | 5 个 FtsZ 构象 |
+| multi-conformation docking |  |  | 450 / 450 完成 |
 
 主要清洗逻辑包括：
 
@@ -44,39 +46,39 @@
 
 ## Vina 复跑结果
 
-从每个 pocket 中选择 Top10 drug-like unique structures 进行 AutoDock Vina 复跑。受体使用 FtsZ receptor PDB；配体由 SMILES 重新生成 3D 构象，并转换为 PDBQT。Vina / OpenBabel 环境通过 `environment-vina.yml` 独立记录。
+对清洗、去盐和结构去重后的 90 个 unique structures 进行 AutoDock Vina 全量复跑。受体使用 FtsZ receptor PDB；配体由 SMILES 重新生成 3D 构象，并转换为 PDBQT。Vina / OpenBabel 环境通过 `environment-vina.yml` 独立记录。其中一个 BP2 大分子使用 loose RDKit 3D-coordinate fallback 完成构象生成，全量复跑最终完成。
 
-| Pocket | 复跑数量 | 成功数量 | 最优复跑 compound | 原始 score | 复跑 score | 分数变化 |
-|---|---:|---:|---|---:|---:|---:|
-| BP1 | 10 | 10 | 19824 | -7.229 | -7.873 | -0.644 |
-| BP2 | 10 | 10 | 746361 | -9.116 | -9.761 | -0.645 |
-| 合计 | 20 | 20 |  |  |  |  |
+| Pocket   |   复跑数量 |   成功数量 | 最优复跑 compound   | 原始 score   | 复跑 score   | 分数变化   |
+|:---------|-----------:|-----------:|:--------------------|:-------------|:-------------|:-----------|
+| BP1      |         37 |         37 | DB00776             | -6.883       | -8.02        | -1.137     |
+| BP2      |         53 |         53 | 686393;CHEMBL392451 | -8.211       | -10.76       | -2.549     |
+| 合计     |         90 |         90 |                     |              |              |            |
 
 分数相关性结果：
 
-| 范围 | n | Pearson r | Pearson p | Spearman r | Spearman p |
-|---|---:|---:|---:|---:|---:|
-| BP1 | 10 | -0.171 | 0.6369 | -0.139 | 0.7009 |
-| BP2 | 10 | 0.680 | 0.0304 | 0.503 | 0.1383 |
-| Overall | 20 | 0.893 | 0.0000 | 0.797 | 0.0000 |
+| 范围    |   n |   Pearson r |   Pearson p |   Spearman r |   Spearman p |
+|:--------|----:|------------:|------------:|-------------:|-------------:|
+| BP1     |  37 |       0.528 |      0.0008 |        0.543 |       0.0005 |
+| BP2     |  53 |       0.743 |      0      |        0.771 |       0      |
+| overall |  90 |       0.737 |      0      |        0.737 |       0      |
 
 解释建议：
 
 - Overall 相关性较高，说明重建流程与旧表格分数整体方向一致；
 - BP2 的 Pearson 相关性更稳定，Top hit 在复跑中仍保持较强 docking score；
-- BP1 的 Top10 内部排序变化较大，可能与 docking box 重建、配体构象、质子化/电荷处理、随机种子或原始参数缺失有关；
+- BP1 的复跑排序变化较明显，可能与 docking box 重建、配体构象、质子化/电荷处理、随机种子或原始参数缺失有关；
 - 该结果适合作为复现一致性与结构解释分析，不应作为实验活性证据。
 
 ## 结合模式辅助分析
 
 为补充分数之外的结构层面信息，本项目对每个 pocket 的复跑最优分子计算了 4 Å 内近邻残基。
 
-| Pocket | Top compound | 复跑 score | 近邻残基摘要 |
-|---|---|---:|---|
-| BP1 | 19824 | -7.873 | SER50B, ASP57B, MET49B, LEU48B, LYS55B, LEU47B, ALA39B, ASN41B, LEU56B |
-| BP2 | 746361 | -9.761 | THR306B, VAL305B, SER260B, ASN189B, ARG304B, ASP196B, ALA262B, ILE225B, GLU185B, VAL294B, GLY193B |
+| Pocket   | Top compound        |   复跑 score | 近邻残基摘要                                                                                               |
+|:---------|:--------------------|-------------:|:-----------------------------------------------------------------------------------------------------------|
+| BP1      | DB00776             |        -8.02 | LEU47B, LYS55B, ASP57B, SER50B, LEU56B, MET49B, ALA39B, ASN41B, LEU48B                                     |
+| BP2      | 686393;CHEMBL392451 |       -10.76 | GLU185B, SER182B, ARG304B, MET169B, VAL186B, LEU188B, SER227B, ASN189B, ILE225B, PRO245B, GLY170B, ILE240B |
 
-其中 BP1 命中残基包括 SER50B、MET49B、LYS55B、LEU47B、ALA39B、ASN41B，能对应 BP1 残基锚点；BP2 命中残基包括 ASN189B、ARG304B、ILE225B、GLU185B，也能对应 BP2 的关键区域。这个结果可用于结合模式讨论，但仍属于 docking pose 层面的计算证据。
+其中 BP1 命中残基包括 LEU47B、LYS55B、ASP57B、SER50B、MET49B、ALA39B、ASN41B，能对应 BP1 残基锚点；BP2 命中残基包括 GLU185B、ARG304B、MET169B、SER227B、ASN189B、ILE225B，也能对应 BP2 的关键区域。这个结果可用于结合模式讨论，但仍属于 docking pose 层面的计算证据。
 
 ![Binding-mode contact views](../results/figures/binding_mode_top_hits.png)
 
@@ -94,6 +96,9 @@
 | `results/figures/top_ligand_structures.png` | Top 候选分子 2D 结构图 |
 | `results/figures/binding_mode_top_hits.png` | BP1/BP2 复跑最优分子的结合模式接触图 |
 | `results/pymol/` | PyMOL-ready 结合模式渲染脚本 |
+| `results/figures/enopt_style_reranking_vs_legacy.png` | EnOpt-style 加权分数与旧分数对比 |
+| `results/figures/ensemble_score_matrix_heatmap.png` | compound × receptor conformation score matrix |
+| `results/figures/enopt_style_conformation_weights.png` | 不同 receptor conformation 的权重 |
 
 ## EnOpt / ensemble 方法边界
 
@@ -103,22 +108,40 @@
 - 已知 active / decoy 或其他可监督标签；
 - 可用于训练、验证和解释权重的 benchmark 数据。
 
-当前资料提供的是 BP1 与 BP2 两个 binding pockets 的 score，而不是同一个 pocket 的多个 receptor conformations，也没有 experimental active / inactive labels。因此，本项目生成的是 EnOpt-ready score matrix 和 two-pocket ensemble baseline。更严格的 EnOpt-style reranking 需要补充多构象 receptor ensemble 或活性/decoy benchmark。
+本项目在原始 BP1/BP2 两口袋 score matrix 基础上，进一步生成了一个小型 FtsZ receptor ensemble：以重建后的 receptor 结构为起点，使用 ANM normal-mode perturbation 得到 base + mode1 ± + mode2 ± 共 5 个构象，并对 BP1/BP2 共 90 个 cleaned unique structures 进行多构象 Vina docking。当前 450 个 docking job 均完成，输出了 compound × conformation score matrix、ensemble-best / ensemble-mean 排序，以及 EnOpt-style conformation-weighted consensus score。
+
+当前权重不是由实验活性标签监督训练得到，而是用旧 worksheet 排序的一致性作为探索性加权依据。因此对外建议表述为 **EnOpt-style weighted consensus reranking**，不要表述为严格 supervised EnOpt model。
+
+关键输出包括：
+
+- `results/tables/receptor_ensemble_manifest.csv`
+- `results/tables/ensemble_vina_scores.csv`
+- `results/tables/enopt_style_score_matrix.csv`
+- `results/tables/enopt_style_weights.csv`
+- `results/tables/enopt_style_top_hits.csv`
+- `docs/enopt_extension.md`
+
+当前 pilot ensemble 的加权 Top 结果：
+
+| pocket | 加权 Top compound | weighted score, kcal/mol | legacy score, kcal/mol |
+|---|---:|---:|---:|
+| BP1 | CHEMBL329500 | -7.691 | -7.270 |
+| BP2 | 85Z | -9.702 | -7.594 |
 
 ## 当前局限
 
 - 原始 docking box/config 未找到，因此本项目 box 来自 pocket detection 输出和残基锚点的重建估计；
-- 复跑只覆盖每个 pocket Top10 drug-like unique structures，用于方法复核，不代表全库重新筛选；
+- 当前复跑覆盖清洗后的 90 个 unique structures；原始 Excel 的 method-level 记录已经合并、去盐和结构去重；
 - 受体制备采用 OpenBabel PDBQT 流程；更严格的研究版本可进一步加入质子化状态、缺失残基、水分子和金属离子处理策略；
 - docking score 仅是计算筛选指标，不等于 IC50、MIC 或其他实验活性；
-- 当前 EnOpt 仅为 ready matrix 和 baseline，不是最终 supervised ML model。
+- 当前 EnOpt-style 部分是 normal-mode receptor ensemble + weighted consensus pilot，不是最终 supervised ML model。
 
 ## 后续工作
 
 1. 在现有结合模式接触图和 `results/pymol/` 脚本基础上，进一步生成 PyMOL ray-traced 图和 2D interaction diagram；
-2. 为 FtsZ 加入多个构象或不同 PDB/MD snapshots，形成真正的 compound × conformation docking matrix；
-3. 寻找 FtsZ 已知 active / inactive 或 decoy set，训练并验证 EnOpt-style reranking；
-4. 将当前 pipeline 结构迁移到其他靶点时，需要重新建立 receptor ensemble、小分子库抽样和验证设计。
+2. 用 curated experimental conformers 或 MD snapshots 替换当前 normal-mode pilot ensemble；
+3. 寻找 FtsZ 已知 active / inactive 或 decoy set，训练并验证更严格的 supervised EnOpt-style reranking；
+4. 将当前 pipeline 结构迁移到 GPCR 或其他靶点时，需要重新建立 receptor ensemble、小分子库抽样和验证设计。
 
 ## 可复现命令
 
@@ -132,6 +155,7 @@ python3 -m venv .venv
 python -m pip install -r requirements.txt
 python -m compileall -q scripts
 python scripts/draw_top_ligands.py
+python scripts/analyze_enopt_style.py
 python scripts/make_summary_figure.py
 ```
 
@@ -145,10 +169,13 @@ micromamba create -y -p .mamba_vina -f environment-vina.yml
 
 python scripts/clean_candidates.py
 python scripts/derive_pocket_boxes.py
-python scripts/prepare_docking_inputs.py --top-n 10 --drug-like-only --max-heavy-atoms 35
+python scripts/prepare_docking_inputs.py --top-n 0 --max-heavy-atoms 100
 python scripts/run_vina_batch.py --exhaustiveness 4 --cpu 4
 python scripts/analyze_binding_contacts.py
 python scripts/draw_top_ligands.py
 python scripts/draw_binding_mode_views.py
 python scripts/make_summary_figure.py
+python scripts/build_receptor_ensemble.py --target-ca-rmsd 0.65 --modes 2
+python scripts/run_ensemble_vina.py --exhaustiveness 3 --cpu 4
+python scripts/analyze_enopt_style.py
 ```

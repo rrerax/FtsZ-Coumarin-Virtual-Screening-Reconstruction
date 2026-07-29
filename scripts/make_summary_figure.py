@@ -40,7 +40,7 @@ def main() -> None:
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     summary = pd.read_csv(TABLE_DIR / "data_quality_summary.csv")
     unique_structures = pd.read_csv(PROCESSED_DIR / "bp_unique_structures.csv")
-    rerun = pd.read_csv(TABLE_DIR / "vina_rerun_top_structures.csv")
+    rerun = pd.read_csv(TABLE_DIR / "vina_rerun_unique_structures.csv")
     contacts = pd.read_csv(TABLE_DIR / "binding_contacts_top_hits.csv")
 
     sns.set_theme(style="whitegrid", font="DejaVu Sans")
@@ -51,7 +51,7 @@ def main() -> None:
     fig.text(
         0.03,
         0.935,
-        "Legacy HTVS records curated into a reproducible two-pocket docking rerun and ensemble-ready score matrix",
+        "Legacy HTVS records curated into a reproducible two-pocket rerun and EnOpt-style conformation ensemble",
         fontsize=12.5,
         color="#5f6b7a",
     )
@@ -59,12 +59,14 @@ def main() -> None:
     method_records = int(summary["method_records"].sum())
     unique_count = int(len(unique_structures))
     rerun_success = int((rerun["returncode"] == 0).sum())
-    matrix_rows = int(pd.read_csv(PROCESSED_DIR / "enopt_score_matrix.csv").shape[0])
+    ensemble = pd.read_csv(TABLE_DIR / "ensemble_vina_scores.csv")
+    ensemble_success = int((ensemble["returncode"] == 0).sum())
+    ensemble_total = int(len(ensemble))
 
     metric_card(fig.add_subplot(grid[0, 0]), "Cleaned records", f"{method_records}", "BP1 + BP2 method-level rows", "#2563eb")
     metric_card(fig.add_subplot(grid[0, 1]), "Unique structures", f"{unique_count}", "After salt stripping and deduplication", "#16a34a")
-    metric_card(fig.add_subplot(grid[0, 2]), "Vina rerun", f"{rerun_success}/20", "Top drug-like structures completed", "#ea580c")
-    metric_card(fig.add_subplot(grid[0, 3]), "EnOpt-ready rows", f"{matrix_rows}", "Two-pocket baseline score matrix", "#7c3aed")
+    metric_card(fig.add_subplot(grid[0, 2]), "Vina rerun", f"{rerun_success}/{len(rerun)}", "Cleaned unique structures completed", "#ea580c")
+    metric_card(fig.add_subplot(grid[0, 3]), "EnOpt-style jobs", f"{ensemble_success}/{ensemble_total}", "Five-conformation rerun completed", "#7c3aed")
 
     ax1 = fig.add_subplot(grid[1, :2])
     sns.histplot(

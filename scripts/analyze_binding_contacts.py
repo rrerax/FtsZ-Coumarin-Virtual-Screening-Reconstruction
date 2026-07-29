@@ -53,7 +53,7 @@ def distance(a: dict[str, object], b: dict[str, object]) -> float:
 
 def main() -> None:
     receptor_atoms = parse_atoms(RECEPTOR)
-    rerun = pd.read_csv(TABLE_DIR / "vina_rerun_top_structures.csv")
+    rerun = pd.read_csv(TABLE_DIR / "vina_rerun_unique_structures.csv")
     best_by_pocket = rerun.sort_values("new_vina_score_kcal_mol").groupby("pocket", group_keys=False).head(1)
     rows = []
     for hit in best_by_pocket.itertuples(index=False):
